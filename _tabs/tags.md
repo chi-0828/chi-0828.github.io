@@ -1,4 +1,5 @@
 ---
-icon: fas fa-book
+layout: tags
+icon: fas fa-tags
 order: 7
 ---
