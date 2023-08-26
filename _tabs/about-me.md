@@ -22,3 +22,11 @@ My research interests include **bioinformatics, memory systems, storage systems,
 - Programming languages
     - C/C++
     - Python
+
+## Ｈonors and Awards
+- Ｈonors
+  - 2023, FAOS - Outstanding Students Conference Travel Grant / 傑出人才基金會 - 優秀學生出國開會申請補助 
+  - 2023, Google - Google Conference Scholarships (APAC) 
+  - 2023, NSTC - Subsidy for Domestic Graduate Students to Attend International Academic Conferences/ 國科會 - 研究生參加國際會議的旅費補助 
+- Awards
+  - 2019-2020 spring semester, CCU - Academic Excellence Award / 國立中正大學 - 校長獎(學期成績第一名)

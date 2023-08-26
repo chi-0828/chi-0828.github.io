@@ -3,10 +3,10 @@ icon: fas fa-book
 order: 2
 ---
 
-<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i> paper link | 
-<i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i> slide link | 
-<i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i> poster link | 
-<i class="fa-brands fa-github fa-xl" style="color: #131415;"></i> realsed code link 
+<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i> paper link &nbsp;
+<i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i> slide link &nbsp;
+<i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i> poster link &nbsp;
+<i class="fa-brands fa-github fa-xl" style="color: #131415;"></i> released code link &nbsp;
 
 ***
 

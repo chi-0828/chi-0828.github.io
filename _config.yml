@@ -20,7 +20,7 @@ timezone: Asia
 
 title: Liang-Chi Chen # the main title
 
-tagline: Ph.D. student # it will display as the sub-title
+tagline: Ph.D. student at NTU CSIE # it will display as the sub-title
 
 description: ""
 
@@ -40,7 +40,7 @@ social:
   email: gary0828gary@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your twitter homepage
+    # - https://twitter.com/username # change to your twitter homepage
     - https://github.com/chi-0828 # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
