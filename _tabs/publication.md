@@ -24,7 +24,8 @@ order: 2
 [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://doi.org/10.1093/bioinformatics/btac058){:target="_blank"}&nbsp;
 
 ### Conference papers
-- Shin-Ting Wu, ***Liang-Chi Chen***, Po-Chun Huang, Yuan-Hao Chang, Chien-Chung Ho, and Wei-Kuan Shih, **"WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories,"** ACM/IEEE CODES+ISSS’23 (Integrated with ACM TECS) (accepted at Jul. 2, unpublished) <font color="#f00">(top conference) </font>    
+- Shin-Ting Wu, ***Liang-Chi Chen***, Po-Chun Huang, Yuan-Hao Chang, Chien-Chung Ho, and Wei-Kuan Shih, **"WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories,"** ACM/IEEE CODES+ISSS’23 (Integrated with ACM TECS) <font color="#f00">(top conference) </font>    
+[<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://doi.org/10.1145/3608033){:target="_blank"}&nbsp;
 
 -  ***Liang-Chi Chen***, Chien-Chung Ho, Yuan-Hao Chang, **"UpPipe: A Novel Pipeline Management on In-Memory Processors for RNA-seq Quantification,"** The 60th ACM/IEEE Design Automation Conference (DAC), San Francisco, CA, USA, July 9-13, 2023. <font color="#f00">(top conference, 23% acceptance ratio) </font>    
 [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://google.com/){:target="_blank"}&nbsp;
