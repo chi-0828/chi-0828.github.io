@@ -9,6 +9,7 @@ on:
       - README.md
       - LICENSE
 
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -16,6 +17,7 @@ permissions:
   pages: write
   id-token: write
 
+# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -26,31 +28,38 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          # submodules: true
+          # If using the 'assets' git submodule from Chirpy Starter, uncomment above
+          # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3
+          ruby-version: 3.3
           bundler-cache: true
 
       - name: Build site
-        run: JEKYLL_ENV=production bundle exec jekyll b -d "_site"
+        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: "production"
 
-      - name: Check `_site` directory
-        run: ls -la _site  # ✅ Ensure build output exists
+      - name: Test site
+        run: |
+          bundle exec htmlproofer _site \
+            \-\-disable-external \
+            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
       - name: Upload site artifact
-        uses: actions/upload-artifact@v4  # ✅ Use v4 instead of upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: "_site"
+          path: "_site${{ steps.pages.outputs.base_path }}"
 
   deploy:
     environment:
@@ -61,6 +70,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
-        with:
-          artifact_name: github-pages  # ✅ Ensure artifact_name is specified
+        uses: actions/deploy-pages@v4
