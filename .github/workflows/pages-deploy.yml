@@ -46,7 +46,7 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll b -d "_site"
+        run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
 
@@ -55,10 +55,10 @@ jobs:
           bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
 
       - name: Upload site artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v1
         with:
           name: github-pages 
-          path: "_site"
+          path: "_site${{ steps.pages.outputs.base_path }}"
 
   deploy:
     environment:
@@ -70,5 +70,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-        with:
-          artifact_name: github-pages
+
