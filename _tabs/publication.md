@@ -11,7 +11,7 @@ order: 2
     - ***Liang-Chi Chen***, Chien-Chung Ho, and Yuan-Hao Chang, “Acceleration RNA-seq Quantification on a Real Processing-in-Memory System," accepted and to appear in IEEE Transactions on Computers (**TC**), 2025.
 
     - Jalil Boukhobza, Pierre Oliver, Wen Sheng Lim, ***Liang-Chi Chen***, Yun-Shan Hsieh, Shin-Ting Wu, Chien-Chung Ho, Po-Chun Huang, and Yuan-Hao Chang, “A Survey on Flash-Memory Storage Systems: A Host-Side Perspective," ACM Transactions on Storage (**TOS**), 2025.
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://dl.acm.org/doi/abs/10.1145/3723167){:target="_blank"}&nbsp
+    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://dl.acm.org/doi/abs/10.1145/3723167){:target="_blank"}&nbsp;
 
 - **2023**
     - Shin-Ting Wu, ***Liang-Chi Chen***, Po-Chun Huang, Yuan-Hao Chang, Chien-Chung Ho, and Wei-Kuan Shih, "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories," ACM Transactions on Embedded Computing Systems (**TECS**), Vol. 22, No. 5s, Article 119 (October 2023), 26 pages.    
