@@ -23,6 +23,8 @@ order: 2
 
 ### Conference papers
 - **2025**
+    - ***Liang-Chi Chen***, Chien-Chung Ho, Tei-Wei Kuo, and Yuan-Hao Chang, “AridWalk: Efficient Graph Random Walks on a Resource-Limited Computational Storage Device," ACM/IEEE International Symposium on Low Power Electronics and Design (**ISLPED**), Reykjavik, Iceland, Aug. 6-8, 2025. <font color="#f00">(top conference) </font> 
+    
     - Chun-Le Yeh, ***Liang-Chi Chen***, Chien-Chung Ho, Yu-Ming Chang, and Da-Wei Chang, “PIMDup: An Optimized Deduplication Design on a Real Processing-in-Memory System," ACM/IEEE Design Automation Conference (**DAC**) (Acceptance rate: 22.6% (420/1862)), San Francisco, CA, USA, June 22-25, 2025. <font color="#f00">(top conference) </font>    
 - **2024**
     - ***Liang-Chi Chen***, Kun-Chi Chiang, Chien-Chung Ho, Yu-Ming Chang, Chin-Chiang Pan, and Yuan-Hao Chang, “LifeSqueezer: Increase the Tolerability of Weak Pages for Lifetime Improvement on TLC-based SSDs with the Off-the-shelf ECC," ACM International Conference on Research in Adaptive and Convergent Systems (RACS), Pompei, Italy, Nov. 5-8, 2024.    
