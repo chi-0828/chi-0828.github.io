@@ -15,6 +15,7 @@ layout: compress
   {% endif %}
 {% endcapture %}
 
+
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ site.alt_lang | default: site.lang }}" {{ prefer_mode }}>
   {% include head.html %}
@@ -29,6 +30,7 @@ layout: compress
         {% include_cached search-results.html lang=lang %}
       </div>
     </div>
+
 
     {% include_cached footer.html lang=lang %}
 
