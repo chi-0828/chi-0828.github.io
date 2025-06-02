@@ -7,49 +7,80 @@ order: 2
 ***
 
 ### Journal papers (ACM/IEEE transactions)
-- **2025**
-    - ***Liang-Chi Chen***, Chien-Chung Ho, and Yuan-Hao Chang, “Accelerating RNA-seq Quantification on a Real Processing-in-Memory System," accepted and to appear in IEEE Transactions on Computers (**TC**), 2025.
+<details open>
+  <summary><strong>2025</strong></summary>
+  <ul>
+    <li><b>Liang-Chi Chen</b>, Chien-Chung Ho, and Yuan-Hao Chang, “Accelerating RNA-seq Quantification on a Real Processing-in-Memory System," <i>IEEE Transactions on Computers <b>(TC)</b> </i>, 2025. 
+        <a href="https://ieeexplore.ieee.org/abstract/document/10955404" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+    </li>
+    <li>Jalil Boukhobza, Pierre Oliver, Wen Sheng Lim, <b>Liang-Chi Chen</b>, Yun-Shan Hsieh, Shin-Ting Wu, Chien-Chung Ho, Po-Chun Huang, and Yuan-Hao Chang, “A Survey on Flash-Memory Storage Systems: A Host-Side Perspective," <i>ACM Transactions on Storage <b>(TOS)</b></i>, 2025.
+      <a href="https://dl.acm.org/doi/abs/10.1145/3723167" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+    </li>
+  </ul>
+</details>
 
-    - Jalil Boukhobza, Pierre Oliver, Wen Sheng Lim, ***Liang-Chi Chen***, Yun-Shan Hsieh, Shin-Ting Wu, Chien-Chung Ho, Po-Chun Huang, and Yuan-Hao Chang, “A Survey on Flash-Memory Storage Systems: A Host-Side Perspective," ACM Transactions on Storage (**TOS**), 2025.     
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://dl.acm.org/doi/abs/10.1145/3723167){:target="_blank"}&nbsp;
-
-- **2023**
-    - Shin-Ting Wu, ***Liang-Chi Chen***, Po-Chun Huang, Yuan-Hao Chang, Chien-Chung Ho, and Wei-Kuan Shih, "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories," ACM Transactions on Embedded Computing Systems (**TECS**), Vol. 22, No. 5s, Article 119 (October 2023), 26 pages.    
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://doi.org/10.1145/3608033){:target="_blank"}&nbsp;
-
-    - Wei-Chen Wang, Chien-Chung Ho, Yung-Chun Li, ***Liang-Chi Chen***, Yu-Ming Chang, "Reaping Both Latency and Reliability Benefits With Elaborate Sanitization Design for 3D TLC NAND Flash," in IEEE Transactions on Computers (**TC**), doi: 10.1109/TC.2023.3272280.   
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://ieeexplore.ieee.org/document/10113786/){:target="_blank"}&nbsp;
+<details>
+  <summary><strong>2023</strong></summary>
+  <ul>
+    <li>Shin-Ting Wu, <b>Liang-Chi Chen</b>, Po-Chun Huang, Yuan-Hao Chang, Chien-Chung Ho, and Wei-Kuan Shih, "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories," <i>ACM Transactions on Embedded Computing Systems <b>(TECS)</b></i>, Vol. 22, No. 5s, Oct. 2023, 26 pages.
+      <a href="https://doi.org/10.1145/3608033" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+    </li>
+    <li>Wei-Chen Wang, Chien-Chung Ho, Yung-Chun Li, <b>Liang-Chi Chen</b>, Yu-Ming Chang, "Reaping Both Latency and Reliability Benefits With Elaborate Sanitization Design for 3D TLC NAND Flash," <i>IEEE Transactions on Computers <b>(TC)</b></i>, 2023.
+      <a href="https://ieeexplore.ieee.org/document/10113786/" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+    </li>
+  </ul>
+</details>
 
 
 ### Conference papers
-- **2025**
-    - ***Liang-Chi Chen***, Chien-Chung Ho, Tei-Wei Kuo, and Yuan-Hao Chang, “AridWalk: Efficient Graph Random Walks on a Resource-Limited Computational Storage Device," ACM/IEEE International Symposium on Low Power Electronics and Design (**ISLPED**), Reykjavik, Iceland, Aug. 6-8, 2025. <font color="#f00">(top conference) </font> 
-    
-    - Chun-Le Yeh, ***Liang-Chi Chen***, Chien-Chung Ho, Yu-Ming Chang, and Da-Wei Chang, “PIMDup: An Optimized Deduplication Design on a Real Processing-in-Memory System," ACM/IEEE Design Automation Conference (**DAC**) (Acceptance rate: 22.6% (420/1862)), San Francisco, CA, USA, June 22-25, 2025. <font color="#f00">(top conference) </font>    
-- **2024**
-    - ***Liang-Chi Chen***, Kun-Chi Chiang, Chien-Chung Ho, Yu-Ming Chang, Chin-Chiang Pan, and Yuan-Hao Chang, “LifeSqueezer: Increase the Tolerability of Weak Pages for Lifetime Improvement on TLC-based SSDs with the Off-the-shelf ECC," ACM International Conference on Research in Adaptive and Convergent Systems (RACS), Pompei, Italy, Nov. 5-8, 2024.    
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](){:target="_blank"}&nbsp;
-    [<i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i>](https://drive.google.com/file/d/1_0BeCuYjl1HhHdIRkAOeLEKhQp7Ln9ek/view?usp=sharing){:target="_blank"}&nbsp;
-- **2023**
-    - Shin-Ting Wu, ***Liang-Chi Chen***, Po-Chun Huang, Yuan-Hao Chang, Chien-Chung Ho, and Wei-Kuan Shih, "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories," ACM/IEEE **CODES+ISSS**’23 (Integrated with ACM TECS) <font color="#f00">(top conference) </font>    
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://doi.org/10.1145/3608033){:target="_blank"}&nbsp;
+<details open>
+  <summary>2025</summary>
+  <ul>
+    <li><b><font color="#f00">[Top conference!]</font></b> <b>Liang-Chi Chen</b>, Chien-Chung Ho, Tei-Wei Kuo, and Yuan-Hao Chang, “AridWalk: Efficient Graph Random Walks on a Resource-Limited Computational Storage Device," ACM/IEEE International Symposium on Low Power Electronics and Design (<b>ISLPED</b>), Reykjavik, Iceland, Aug. 6-8, 2025.</li>
+    <li><b><font color="#f00">[Top conference!]</font></b> Chun-Le Yeh, <b>Liang-Chi Chen</b>, Chien-Chung Ho, Yu-Ming Chang, and Da-Wei Chang, “PIMDup: An Optimized Deduplication Design on a Real Processing-in-Memory System," ACM/IEEE Design Automation Conference (<b>DAC</b>) (Acceptance rate: 22.6% (420/1862)), San Francisco, CA, USA, June 22-25, 2025.</li>
+  </ul>
+</details>
 
-    -  ***Liang-Chi Chen***, Chien-Chung Ho, Yuan-Hao Chang, "UpPipe: A Novel Pipeline Management on In-Memory Processors for RNA-seq Quantification," The 60th ACM/IEEE Design Automation Conference (**DAC**), San Francisco, CA, USA, July 9-13, 2023. <font color="#f00">(top conference) </font>    
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](http://ieeexplore.ieee.org/abstract/document/10247915/){:target="_blank"}&nbsp;
-    [<i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i>](https://drive.google.com/file/d/1XaUErirVkLod5UZwsReGUwLDN2Af026Q/view?usp=drive_link){:target="_blank"}&nbsp;
-    [<i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i>](https://drive.google.com/file/d/1OGtMobOE1xZWm_qes1gTFDT9nAnk1r31/view?usp=drive_link){:target="_blank"}&nbsp;
-    [&nbsp;<i class="fa-brands fa-github fa-xl" style="color: #131415;"></i>](https://github.com/chi-0828/UpPipe){:target="_blank"}&nbsp;
+<details>
+  <summary>2024</summary>
+  <ul>
+    <li><b>Liang-Chi Chen</b>, Kun-Chi Chiang, Chien-Chung Ho, Yu-Ming Chang, Chin-Chiang Pan, and Yuan-Hao Chang, “LifeSqueezer: Increase the Tolerability of Weak Pages for Lifetime Improvement on TLC-based SSDs with the Off-the-shelf ECC," ACM International Conference on Research in Adaptive and Convergent Systems (RACS), Pompei, Italy, Nov. 5-8, 2024.
+      <a href="#"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+      <a href="https://drive.google.com/file/d/1_0BeCuYjl1HhHdIRkAOeLEKhQp7Ln9ek/view?usp=sharing" target="_blank"><i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i></a>
+    </li>
+  </ul>
+</details>
 
-    - ***Liang-Chi Chen***, Shu-Qi Yu, Chien-Chung Ho, Wei-Chen Wang, Yung-Chun Li, "Efficient Sanitization Design for LSM-based Key-Value Store over 3D MLC NAND Flash," In Proceedings of the 38th ACM/SIGAPP Symposium on Applied Computing (SAC '23)," Association for Computing Machinery, New York, NY, USA, 72–75. https://doi.org/10.1145/3555776.3577780   
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://dl.acm.org/doi/abs/10.1145/3555776.3577780){:target="_blank"}&nbsp;
-    [<i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i>](https://drive.google.com/file/d/19bH_Trm85HtkHarAajefpxZoKSd5CQV3/view?usp=drive_link){:target="_blank"}&nbsp;
-    [<i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i>](https://drive.google.com/file/d/1rnKlQvyG6Q5AiBKUgZVQMs12DnCjlJQO/view?usp=drive_link){:target="_blank"}&nbsp;
+<details>
+  <summary>2023</summary>
+  <ul>
+    <li><b><font color="#f00">[Top conference!]</font></b> Shin-Ting Wu, <b>Liang-Chi Chen</b>, Po-Chun Huang, Yuan-Hao Chang, Chien-Chung Ho, and Wei-Kuan Shih, “WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories," ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis <b>(CODES+ISSS)</b>, Germany, Sep. 17-22, 2023. (Journal Track, Integrated with ACM TECS) 
+      <a href="https://doi.org/10.1145/3608033" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+    </li>
+    <li><b><font color="#f00">[Top conference!]</font></b> <b>Liang-Chi Chen</b>, Chien-Chung Ho, Yuan-Hao Chang, "UpPipe: A Novel Pipeline Management on In-Memory Processors for RNA-seq Quantification," The 60th ACM/IEEE Design Automation Conference <b>(DAC)</b>, San Francisco, CA, USA, July 9-13, 2023.
+      <a href="http://ieeexplore.ieee.org/abstract/document/10247915/" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+      <a href="https://drive.google.com/file/d/1XaUErirVkLod5UZwsReGUwLDN2Af026Q/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i></a>
+      <a href="https://drive.google.com/file/d/1OGtMobOE1xZWm_qes1gTFDT9nAnk1r31/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i></a>
+      <a href="https://github.com/chi-0828/UpPipe" target="_blank"><i class="fa-brands fa-github fa-xl" style="color: #131415;"></i></a>
+    </li>
+    <li><b>Liang-Chi Chen</b>, Shu-Qi Yu, Chien-Chung Ho, Wei-Chen Wang, Yung-Chun Li, "Efficient Sanitization Design for LSM-based Key-Value Store over 3D MLC NAND Flash," In Proceedings of the 38th ACM/SIGAPP Symposium on Applied Computing (SAC '23), Association for Computing Machinery, New York, NY, USA, 72–75. https://doi.org/10.1145/3555776.3577780
+      <a href="https://dl.acm.org/doi/abs/10.1145/3555776.3577780" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+      <a href="https://drive.google.com/file/d/19bH_Trm85HtkHarAajefpxZoKSd5CQV3/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i></a>
+      <a href="https://drive.google.com/file/d/1rnKlQvyG6Q5AiBKUgZVQMs12DnCjlJQO/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i></a>
+    </li>
+  </ul>
+</details>
 
-- **2022**
-    -  ***Liang-Chi Chen***, Shu-Qi Yu, Chien-Chung Ho, Yuan-Hao Chang, Da-Wei Chang, Wei-Chen Wang, Yu-Ming, "RNA-seq Quantification on Processing in memory Architecture: Observation and Characterization," 2022 IEEE 11th Non-Volatile Memory Systems and Applications Symposium (NVMSA), Taipei, Taiwan, 2022, pp. 26-32, doi: 10.1109/NVMSA56066.2022.00014.   
-    [<i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i>](https://ieeexplore.ieee.org/abstract/document/9898625/){:target="_blank"}&nbsp;
-    [<i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i>](https://drive.google.com/file/d/1BBApsF9JVOiIAwc3cDyd31qJUWnrnZls/view?usp=drive_link){:target="_blank"}&nbsp;
-    [<i class="fa-brands fa-github fa-xl" style="color: #131415;"></i>](https://github.com/chi-0828/RNA-Abundance-Quantification-on-UPMEM){:target="_blank"}&nbsp;
+<details>
+  <summary>2022</summary>
+  <ul>
+    <li><b>Liang-Chi Chen</b>, Shu-Qi Yu, Chien-Chung Ho, Yuan-Hao Chang, Da-Wei Chang, Wei-Chen Wang, Yu-Ming, "RNA-seq Quantification on Processing in memory Architecture: Observation and Characterization," 2022 IEEE 11th Non-Volatile Memory Systems and Applications Symposium (NVMSA), Taipei, Taiwan, 2022, pp. 26-32, doi: 10.1109/NVMSA56066.2022.00014.
+      <a href="https://ieeexplore.ieee.org/abstract/document/9898625/" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
+      <a href="https://drive.google.com/file/d/1BBApsF9JVOiIAwc3cDyd31qJUWnrnZls/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i></a>
+      <a href="https://github.com/chi-0828/RNA-Abundance-Quantification-on-UPMEM" target="_blank"><i class="fa-brands fa-github fa-xl" style="color: #131415;"></i></a>
+    </li>
+  </ul>
+</details>
 
 
 ### Other journal papers
