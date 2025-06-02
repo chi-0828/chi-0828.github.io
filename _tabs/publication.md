@@ -34,7 +34,7 @@ order: 2
 
 ### Conference papers
 <details open>
-  <summary>2025</summary>
+  <summary><strong>2025</strong></summary>
   <ul>
     <li><b><font color="#f00">[Top conference!]</font></b> <b>Liang-Chi Chen</b>, Chien-Chung Ho, Tei-Wei Kuo, and Yuan-Hao Chang, “AridWalk: Efficient Graph Random Walks on a Resource-Limited Computational Storage Device," ACM/IEEE International Symposium on Low Power Electronics and Design (<b>ISLPED</b>), Reykjavik, Iceland, Aug. 6-8, 2025.</li>
     <li><b><font color="#f00">[Top conference!]</font></b> Chun-Le Yeh, <b>Liang-Chi Chen</b>, Chien-Chung Ho, Yu-Ming Chang, and Da-Wei Chang, “PIMDup: An Optimized Deduplication Design on a Real Processing-in-Memory System," ACM/IEEE Design Automation Conference (<b>DAC</b>) (Acceptance rate: 22.6% (420/1862)), San Francisco, CA, USA, June 22-25, 2025.</li>
@@ -42,7 +42,7 @@ order: 2
 </details>
 
 <details>
-  <summary>2024</summary>
+  <summary><strong>2024</strong></summary>
   <ul>
     <li><b>Liang-Chi Chen</b>, Kun-Chi Chiang, Chien-Chung Ho, Yu-Ming Chang, Chin-Chiang Pan, and Yuan-Hao Chang, “LifeSqueezer: Increase the Tolerability of Weak Pages for Lifetime Improvement on TLC-based SSDs with the Off-the-shelf ECC," ACM International Conference on Research in Adaptive and Convergent Systems (RACS), Pompei, Italy, Nov. 5-8, 2024.
       <a href="#"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
@@ -52,7 +52,7 @@ order: 2
 </details>
 
 <details>
-  <summary>2023</summary>
+  <summary><strong>2023</strong></summary>
   <ul>
     <li><b><font color="#f00">[Top conference!]</font></b> Shin-Ting Wu, <b>Liang-Chi Chen</b>, Po-Chun Huang, Yuan-Hao Chang, Chien-Chung Ho, and Wei-Kuan Shih, “WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories," ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis <b>(CODES+ISSS)</b>, Germany, Sep. 17-22, 2023. (Journal Track, Integrated with ACM TECS) 
       <a href="https://doi.org/10.1145/3608033" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
@@ -72,7 +72,7 @@ order: 2
 </details>
 
 <details>
-  <summary>2022</summary>
+  <summary><strong>2022</strong></summary>
   <ul>
     <li><b>Liang-Chi Chen</b>, Shu-Qi Yu, Chien-Chung Ho, Yuan-Hao Chang, Da-Wei Chang, Wei-Chen Wang, Yu-Ming, "RNA-seq Quantification on Processing in memory Architecture: Observation and Characterization," 2022 IEEE 11th Non-Volatile Memory Systems and Applications Symposium (NVMSA), Taipei, Taiwan, 2022, pp. 26-32, doi: 10.1109/NVMSA56066.2022.00014.
       <a href="https://ieeexplore.ieee.org/abstract/document/9898625/" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a>
