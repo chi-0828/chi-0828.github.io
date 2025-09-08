@@ -36,8 +36,18 @@ order: 2
 <details open>
   <summary><strong>2025</strong></summary>
   <ol>
-    <li><b><font color="#f00">[Top conference!]</font></b> <b>Liang-Chi Chen</b>, Chien-Chung Ho, Tei-Wei Kuo, and Yuan-Hao Chang, “AridWalk: Efficient Graph Random Walks on a Resource-Limited Computational Storage Device," ACM/IEEE International Symposium on Low Power Electronics and Design (<b>ISLPED</b>), Reykjavik, Iceland, Aug. 6-8, 2025.</li>
-    <li><b><font color="#f00">[Top conference!]</font></b> Chun-Le Yeh, <b>Liang-Chi Chen</b>, Chien-Chung Ho, Yu-Ming Chang, and Da-Wei Chang, “PIMDup: An Optimized Deduplication Design on a Real Processing-in-Memory System," ACM/IEEE Design Automation Conference (<b>DAC</b>) (Acceptance rate: 22.6% (420/1862)), San Francisco, CA, USA, June 22-25, 2025.</li>
+    <li><b><font color="#f00">[Top conference!]</font></b> <b>Liang-Chi Chen</b>, Chien-Chung Ho, Tei-Wei Kuo, and Yuan-Hao Chang, “AridWalk: Efficient Graph Random Walks on a Resource-Limited Computational Storage Device," ACM/IEEE International Symposium on Low Power Electronics and Design (<b>ISLPED</b>), Reykjavik, Iceland, Aug. 6-8, 2025.
+      <!-- <a href="http://ieeexplore.ieee.org/abstract/document/10247915/" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a> -->
+      <a href="https://drive.google.com/file/d/1v73jESazLJCI0EyNty_qxQH0z1Wpqhi0/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i></a>
+      <!-- <a href="https://drive.google.com/file/d/1OGtMobOE1xZWm_qes1gTFDT9nAnk1r31/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i></a> -->
+      <!-- <a href="https://github.com/chi-0828/UpPipe" target="_blank"><i class="fa-brands fa-github fa-xl" style="color: #131415;"></i></a> -->
+    </li>
+    <li><b><font color="#f00">[Top conference!]</font></b> Chun-Le Yeh, <b>Liang-Chi Chen</b>, Chien-Chung Ho, Yu-Ming Chang, and Da-Wei Chang, “PIMDup: An Optimized Deduplication Design on a Real Processing-in-Memory System," ACM/IEEE Design Automation Conference (<b>DAC</b>) (Acceptance rate: 22.6% (420/1862)), San Francisco, CA, USA, June 22-25, 2025.
+      <!-- <a href="http://ieeexplore.ieee.org/abstract/document/10247915/" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a> -->
+      <a href="https://drive.google.com/file/d/1Jf_BP1C35IZJ7l8iFXcV-Or8CgQNvT7V/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i></a>
+      <a href="https://drive.google.com/file/d/13P8nd0FF5BuSrkGdvRTd3N8lbBNC1Yv1/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i></a>
+      <!-- <a href="https://github.com/chi-0828/UpPipe" target="_blank"><i class="fa-brands fa-github fa-xl" style="color: #131415;"></i></a> -->
+    </li>
   </ol>
 </details>
 
