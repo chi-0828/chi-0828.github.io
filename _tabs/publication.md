@@ -36,7 +36,7 @@ order: 2
 <details open>
   <summary><strong>2026</strong></summary>
   <ol>
-    <li>Jo-Ling Huang <b>Liang-Chi Chen</b>, Chien-Chung Ho, and Yuan-Hao Chang, "LAMP: An Adaptive Near-Memory Processing System for High-Performance Long-Read Mapping," ACM/IEEE Design, Automation and Test in Europe (<b>DATE</b>), Verona, Italy, Apr. 20–22, 2026.
+    <li>Jo-Ling Huang, <b>Liang-Chi Chen</b>, Chien-Chung Ho, and Yuan-Hao Chang, "LAMP: An Adaptive Near-Memory Processing System for High-Performance Long-Read Mapping," ACM/IEEE Design, Automation and Test in Europe (<b>DATE</b>), Verona, Italy, Apr. 20–22, 2026.
       <!-- <a href="http://ieeexplore.ieee.org/abstract/document/10247915/" target="_blank"><i class="fa-solid fa-file-pdf fa-xl" style="color: #d32727;"></i></a> -->
       <!-- <a href="https://drive.google.com/file/d/1v73jESazLJCI0EyNty_qxQH0z1Wpqhi0/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-powerpoint fa-xl" style="color: #e47207;"></i></a> -->
       <!-- <a href="https://drive.google.com/file/d/1OGtMobOE1xZWm_qes1gTFDT9nAnk1r31/view?usp=drive_link" target="_blank"><i class="fa-solid fa-file-image fa-xl" style="color: #154dac;"></i></a> -->
