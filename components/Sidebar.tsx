@@ -46,6 +46,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className = "", onNavClick }) 
 
                 {/* CV Button */}
                 <a 
+                    target="_blank"
                     href={PROFILE.cvLink}
                     className="w-full bg-slate-800 text-white py-2.5 rounded-xl text-sm font-bold flex items-center justify-center gap-2 hover:bg-slate-700 transition-all shadow-md mb-8"
                 >
@@ -86,35 +87,38 @@ export const Sidebar: React.FC<SidebarProps> = ({ className = "", onNavClick }) 
                 <div className="flex items-center justify-center gap-4">
                     <a 
                         href={`mailto:${PROFILE.email}`} 
-                        className="w-10 h-10 flex items-center justify-center rounded-full bg-red-100 text-red-600 hover:bg-red-200 transition-colors shadow-sm" 
+                        className="w-10 h-10 flex items-center justify-center rounded-full bg-red-50 text-red-600 hover:bg-red-200 transition-colors shadow-sm" 
                         aria-label="Email"
                     >
                         <Mail size={18} />
                     </a>
                     <a 
-                        href="#" 
-                        className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-900 text-white hover:bg-slate-700 transition-colors shadow-sm" 
+                        target="_blank"
+                        href="https://github.com/chi-0828"
+                        className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 text-black-700 hover:bg-slate-700 transition-colors shadow-sm" 
                         aria-label="GitHub"
                     >
                         <Github size={18} />
                     </a>
                     <a 
-                        href="#" 
+                        target="_blank"
+                        href="https://scholar.google.com.tw/citations?user=SoyMWUsAAAA" 
                         className="w-10 h-10 flex items-center justify-center rounded-full bg-sky-100 text-sky-600 hover:bg-sky-200 transition-colors shadow-sm" 
                         aria-label="Google Scholar"
                     >
                         <GraduationCap size={18} />
                     </a>
                     <a 
-                        href="#" 
-                        className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-sm" 
+                        target="_blank"
+                        href="https://www.linkedin.com/in/liang-chi-chen-882a531b9" 
+                        className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors shadow-sm" 
                         aria-label="LinkedIn"
                     >
                         <Linkedin size={18} />
                     </a>
                 </div>
                 <div className="text-center mt-4">
-                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">lliangchichen copyright</span>
+                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Contact Information</span>
                 </div>
             </div>
         </aside>

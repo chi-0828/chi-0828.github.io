@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, FileText, Quote, Code, MonitorPlay, Link2 } from 'lucide-react';
+import { BookOpen, FileText, Quote, Code, MonitorPlay, Link2, FileImage,  Image, Frame} from 'lucide-react';
 import { PAPERS, PROFILE } from '../constants';
 import { PaperType, Paper } from '../types';
 
@@ -10,19 +10,17 @@ export const Publications: React.FC = () => {
     const preprints = PAPERS.filter(p => p.type === PaperType.PREPRINT);
 
     return (
-        <div className="max-w-5xl mx-auto py-4">
+        <div className="max-w-4xl mx-auto py-4">
             <header className="mb-12 border-b border-slate-200 pb-8">
                 <div className="flex items-center gap-3 mb-2">
                     <BookOpen size={32} className="text-slate-700" />
-                    <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Publications</h1>
+                    <h1 className="text-3xl md:text-3xl font-extrabold text-slate-900 tracking-tight">Publications</h1>
                 </div>
-                <p className="text-slate-600 text-base md:text-lg max-w-2xl ml-1 leading-relaxed">
-                    A collection of my research work on memory systems, storage architecture, and data-intensive computing.
-                </p>
             </header>
 
-            <PaperSection title="Journal Papers" papers={journalPapers} />
+            <PaperSection title="IEEE/ACM Transactions" papers={journalPapers} />
             <PaperSection title="Conference Papers" papers={confPapers} />
+            {/* <PaperSection title="Other Journal Papers" papers={others} /> */}
             <PaperSection title="Preprints & Technical Reports" papers={preprints} color="bg-slate-400" />
         </div>
     );
@@ -48,10 +46,10 @@ const PaperSection: React.FC<{ title: string; papers: Paper[]; color?: string }>
 
 const PaperCard: React.FC<{ paper: Paper }> = ({ paper }) => {
     return (
-        <article className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all duration-200 group">
+        <article className="relative bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:border-slate-300 transition-all duration-300 group border-l-4 border-l-transparent hover:border-l-[#4f0505] hover:bg-slate-50 hover:shadow-md">
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
                 <div className="flex-grow">
-                    <h3 className="text-lg font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-dark transition-colors">
+                    <h3 className="text-base font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary-dark transition-colors">
                         {paper.title}
                     </h3>
                     <p className="text-slate-600 text-sm mb-2 leading-relaxed">
@@ -93,6 +91,7 @@ const PaperCard: React.FC<{ paper: Paper }> = ({ paper }) => {
                 {paper.links.code && <ActionButton icon={<Code size={16} />} label="Code" href={paper.links.code} />}
                 {paper.links.slides && <ActionButton icon={<MonitorPlay size={16} />} label="Slides" href={paper.links.slides} />}
                 {paper.links.arxiv && <ActionButton icon={<Link2 size={16} />} label="arXiv" href={paper.links.arxiv} />}
+                {paper.links.poster && <ActionButton icon={<FileImage size={16} />} label="Poster" href={paper.links.poster} />}
             </div>
         </article>
     );
@@ -102,7 +101,7 @@ const ActionButton: React.FC<{ icon: React.ReactNode; label: string; href?: stri
     const className = "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 bg-slate-50 rounded-lg hover:bg-slate-100 hover:text-slate-900 transition-colors";
     
     if (href) {
-        return <a href={href} className={className}>{icon} {label}</a>;
+        return <a href={href} target="_blank" className={className}>{icon} {label}</a>;
     }
     return <button onClick={onClick} className={className}>{icon} {label}</button>;
 };

@@ -20,6 +20,7 @@ export interface Paper {
         code?: string;
         slides?: string;
         arxiv?: string;
+        poster?: string;
     };
     note?: string; // e.g., "Under Review"
 }
@@ -31,6 +32,7 @@ export interface EducationItem {
     period: string;
     status?: string;
     details?: string;
+    logo: string;
 }
 
 export interface ExperienceItem {
@@ -40,7 +42,7 @@ export interface ExperienceItem {
     location?: string;
     period: string;
     description: string;
-    icon: 'science' | 'code';
+    logo: string;
 }
 
 export interface NewsItem {
