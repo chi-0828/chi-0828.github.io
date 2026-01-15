@@ -39,9 +39,9 @@ export const EXPERIENCE: ExperienceItem[] = [
     {
         id: '1',
         role: "Research Intern",
-        company: "Academia Sinica (Taipei)",
+        company: "Institute of Information Science, Academia Sinica (Taipei)",
         period: "Summer 2022",
-        description: "Institute of Information Science. Worked on performance analysis for distributed systems.",
+        description: "Worked on processing-in-memory systems.",
         logo: './img/iislogo.png'
     },
     {
@@ -49,7 +49,7 @@ export const EXPERIENCE: ExperienceItem[] = [
         role: "SWE Intern",
         company: "Patere Co. (Hsinchu)",
         period: "Summer 2021",
-        description: "Full-stack development for enterprise internal management tools.",
+        description: "Object detection and computer vision implementation.",
         logo: './img/patere.png'
     }
 ];
