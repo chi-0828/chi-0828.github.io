@@ -5,7 +5,7 @@ export const PROFILE = {
     name: "Liang-Chi Chen",
     role: "Ph.D. Candidate @ NTU",
     description: "Research Area: Memory and Storage systems, Processing-in-Memory, In-Storage Computing.",
-    avatarUrl: "img/me5.jpg",
+    avatarUrl: "./img/me5.jpg",
     email: "d12922012@csie.ntu.edu.tw",
     cvLink: "https://drive.google.com/file/d/1hzd7VcIP-beZHm7quPNHfYLjCkoQpkQz/view?usp=drive_link"
 };
@@ -17,21 +17,21 @@ export const EDUCATION: EducationItem[] = [
         degree: "Ph.D. in Computer Science and Information Engineering",
         period: "2023 — Present",
         status: "Ph.D. Candidate (Advanced in Spring 2025)",
-        logo: "img/ntu.jpg"
+        logo: "./img/ntu.jpg"
     },
     {
         id: '2',
         school: "National Cheng Kung University (NCKU)",
         degree: "M.S. in Computer Science and Information Engineering",
         period: "2022 — 2023",
-        logo: "img/ncku.png"
+        logo: "./img/ncku.png"
     },
     {
         id: '3',
         school: "National Chung Cheng University (CCU)",
         degree: "B.S. in Computer Science and Information Engineering",
         period: "2018 — 2022",
-        logo: "img/ccu.png"
+        logo: "./img/ccu.png"
     }
 ];
 
@@ -42,7 +42,7 @@ export const EXPERIENCE: ExperienceItem[] = [
         company: "Academia Sinica (Taipei)",
         period: "Summer 2022",
         description: "Institute of Information Science. Worked on performance analysis for distributed systems.",
-        logo: 'img/iislogo.png'
+        logo: './img/iislogo.png'
     },
     {
         id: '2',
@@ -50,7 +50,7 @@ export const EXPERIENCE: ExperienceItem[] = [
         company: "Patere Co. (Hsinchu)",
         period: "Summer 2021",
         description: "Full-stack development for enterprise internal management tools.",
-        logo: 'img/patere.png'
+        logo: './img/patere.png'
     }
 ];
 
