@@ -290,7 +290,7 @@ export const PAPERS: Paper[] = [
     {
         id: 'p1',
         title: "PIM or CXL-PIM? Understanding Architectural Trade-offs Through Large-Scale Benchmarking",
-        authors: ["I Lee", "Bao-Kai Wang", "Liang-Chi Chen", "Wen Sheng Lim", "Da-Wei Chang", "Yu-Ming Chang", "Chieng-Chung Ho"],
+        authors: ["I-Ting Lee", "Bao-Kai Wang", "Liang-Chi Chen", "Wen Sheng Lim", "Da-Wei Chang", "Yu-Ming Chang", "Chieng-Chung Ho"],
         venue: "arXiv preprint arXiv:2511.14400",
         year: "2025",
         type: PaperType.PREPRINT,
