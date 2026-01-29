@@ -4,7 +4,7 @@ import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem } 
 export const PROFILE = {
     name: "Liang-Chi Chen",
     role: "Ph.D. Candidate @ NTU",
-    description: "Research Area: Memory and Storage systems, Processing-in-Memory, In-Storage Computing.",
+    description: "",
     avatarUrl: "./img/me5.jpg",
     email: "d12922012@csie.ntu.edu.tw",
     cvLink: "https://drive.google.com/file/d/1hzd7VcIP-beZHm7quPNHfYLjCkoQpkQz/view?usp=drive_link"
@@ -38,40 +38,54 @@ export const EDUCATION: EducationItem[] = [
 export const EXPERIENCE: ExperienceItem[] = [
     {
         id: '1',
-        role: "Research Intern",
-        company: "Institute of Information Science, Academia Sinica (Taipei)",
-        period: "Summer 2022",
-        description: "Worked on processing-in-memory systems.",
-        logo: './img/iislogo.png'
+        role: "Software Engineering Intern, PhD",
+        company: "Google, Taiwan", 
+        period: "Summer 2026 (upcoming)",
+        description: "TPU software/firmware team.",
+        logo: '/img/google.jfif'
     },
     {
         id: '2',
-        role: "SWE Intern",
-        company: "Patere Co. (Hsinchu)",
+        role: "Research Intern",
+        company: "Institute of Information Science, Academia Sinica, Taipei",
+        period: "Summer 2022",
+        description: "Worked on processing-in-memory systems.",
+        logo: '/img/iislogo.png'
+    },
+    {
+        id: '3',
+        role: "Software Engineering Intern",
+        company: "Patere Co., Hsinchu",
         period: "Summer 2021",
         description: "Object detection and computer vision implementation.",
-        logo: './img/patere.png'
+        logo: '/img/patere.png'
     }
 ];
 
 export const NEWS: NewsItem[] = [
     {
         id: '1',
-        date: "2025-11",
-        monthYear: "2025-11",
-        content: <span>Paper accepted by <strong>DATE 2026</strong> (Processing-in-Memory)</span>
+        date: "2026-01",
+        monthYear: "2026-01",
+        content: <span>Offer accepted: <strong className="text-red-700">Google</strong> PhD Summer Intern (2026)</span>
     },
     {
         id: '2',
-        date: "2025-05",
-        monthYear: "2025-05",
-        content: <span>Paper accepted by <strong>ISLPED 2025</strong> (In-Storage Computing)</span>
+        date: "2025-11",
+        monthYear: "2025-11",
+        content: <span>Paper accepted by <strong className="text-red-700">DATE 2026</strong> (Processing-in-Memory)</span>
     },
     {
         id: '3',
+        date: "2025-05",
+        monthYear: "2025-05",
+        content: <span>Paper accepted by <strong className="text-red-700">ISLPED 2025</strong> (In-Storage Computing)</span>
+    },
+    {
+        id: '4',
         date: "2025-04",
         monthYear: "2025-04",
-        content: <span>Paper accepted by <strong>IEEE TC</strong></span>
+        content: <span>Paper accepted by <strong className="text-red-700">IEEE TC</strong></span>
     }
 ];
 
@@ -291,7 +305,7 @@ export const PAPERS: Paper[] = [
         id: 'p1',
         title: "PIM or CXL-PIM? Understanding Architectural Trade-offs Through Large-Scale Benchmarking",
         authors: ["I-Ting Lee", "Bao-Kai Wang", "Liang-Chi Chen", "Wen Sheng Lim", "Da-Wei Chang", "Yu-Ming Chang", "Chieng-Chung Ho"],
-        venue: "arXiv preprint arXiv:2511.14400",
+        venue: "arXiv preprint",
         year: "2025",
         type: PaperType.PREPRINT,
         links: {
