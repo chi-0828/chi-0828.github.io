@@ -11,7 +11,7 @@ export const Home: React.FC = () => {
                     <div className="p-2 rounded-lg">
                         <Contact className="text-slate-700" size={24} />
                     </div>
-                    <h2 className="text-2xl font-bold text-slate-800">Hello, I'm Liang-Chi Chen (陳亮錡).</h2>
+                    <h2 className="text-2xl font-bold text-slate-800">Hello, I'm Liang-Chi Chen.</h2>
                 </div>
 
                 {/* 內容卡片 */}
