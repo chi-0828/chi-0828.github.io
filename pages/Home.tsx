@@ -16,10 +16,10 @@ export const Home: React.FC = () => {
 
                 {/* 內容卡片 */}
                 <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
-                    <p className="text-slate-600 leading-loose text-base mb-6">
-                        I am a <strong className="text-slate-900 font-bold">PhD Candidate</strong> at National Taiwan University, 
-                        specializing in <span className="text-slate-800 font-medium bg-slate-100 px-2 py-0.5 rounded">Embedded Systems</span> and 
-                        <span className="text-slate-800 font-medium bg-slate-100 px-2 py-0.5 rounded mx-1">Memory/Storage Systems/Devices</span>.
+                    <p className="text-slate-800 text-base mb-4">
+                        I am currently a PhD Candidate at National Taiwan University, 
+                        specializing in Embedded Systems and 
+                        Memory/Storage Systems/Devices.
                         My PhD research focuses on Processing-in-Memory (PIM) and In-Storage Computing accelerators. 
                         I also work on optimizations for NAND flash, emerging NVM (e.g., ReRAM or persistent memory), and CXL systems.
                     </p>
