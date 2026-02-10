@@ -5,7 +5,7 @@ export const PROFILE = {
     name: "Liang-Chi Chen",
     role: "Ph.D. Candidate @ NTU",
     description: "",
-    avatarUrl: "./img/me5.jpg",
+    avatarUrl: "./img/cccat.jpg",
     email: "d12922012@csie.ntu.edu.tw",
     cvLink: "https://drive.google.com/file/d/1hzd7VcIP-beZHm7quPNHfYLjCkoQpkQz/view?usp=drive_link"
 };
