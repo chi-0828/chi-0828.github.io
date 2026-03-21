@@ -31,18 +31,26 @@ const PaperSection: React.FC<{ title: string; papers: Paper[]; color?: string }>
     if (papers.length === 0) return null;
 
     return (
-        <section className="mb-12"> {/* 減少區塊間距 mb-16 -> mb-12 */}
-            <div className="flex items-center gap-2 mb-4"> {/* 標題貼近一點 mb-8 -> mb-4 */}
+        <section className="mb-12">
+            <div className="flex items-center gap-2 mb-4">
                 <span className={`w-1.5 h-6 ${color} rounded-full`}></span>
-                <h2 className="text-xl font-bold text-slate-800 uppercase tracking-wide">{title}</h2>
+                <h2 className="text-xl font-bold text-slate-800 uppercase tracking-wide flex items-center gap-2">
+                    {title}
+                    {/* 標題旁顯示該類別的總篇數 */}
+                    <span className="text-slate-600 text-lg font-medium">
+                        ({papers.length})
+                    </span>
+                </h2>
             </div>
             
-            {/* 這裡是大容器：白底、圓角、統一陰影 */}
             <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                {/* 使用 divide-y 在每個項目之間自動加線 */}
                 <div className="divide-y divide-slate-100">
-                    {papers.map(paper => (
-                        <PaperCard key={paper.id} paper={paper} />
+                    {papers.map((paper, index) => (
+                        <PaperCard 
+                            key={paper.id} 
+                            paper={paper} 
+                            index={index + 1} 
+                        />
                     ))}
                 </div>
             </div>
@@ -51,25 +59,29 @@ const PaperSection: React.FC<{ title: string; papers: Paper[]; color?: string }>
 };
 
 
-const PaperCard: React.FC<{ paper: Paper }> = ({ paper }) => {
+// 更新 Props 加上 index
+const PaperCard: React.FC<{ paper: Paper; index: number }> = ({ paper, index }) => {
     return (
-        // 這裡移除了 shadow, rounded, border，改用 hover 背景變色
         <article className="relative p-5 hover:bg-slate-50 transition-colors duration-200 group">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-[#4f0505] transition-colors duration-200"></div>
 
             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
                 <div className="flex-grow pr-4">
                     
-                    {/* Title */}
-                    <h3 className="text-base font-bold text-slate-900 leading-snug mb-1.5 group-hover:text-primary-dark transition-colors">
-                        {paper.title}
+                    {/* Title with Index */}
+                    <h3 className="text-base font-bold text-slate-900 leading-snug mb-1.5 group-hover:text-primary-dark transition-colors flex items-start gap-2">
+                        {/* 新增：標號顯示區塊 */}
+                        <span className="text-slate-800 font-mono text-sm mt-[2px] shrink-0">
+                            [{index}]
+                        </span>
+                        <span>{paper.title}</span>
                     </h3>
                     
-                    <p className="text-slate-600 text-[13px] md:text-sm mb-2 leading-relaxed">
+                    <p className="text-slate-600 text-[13px] md:text-sm mb-2 leading-relaxed ml-7"> {/* 新增 ml-7 讓作者清單與標題文字對齊 */}
                         {paper.authors.map((author, i) => (
                             <span key={i}>
                                 {author === PROFILE.name ? (
-                                    <strong className="text-slate-900 font-bold">{author}</strong> // 拿掉底線，保持清單乾淨
+                                    <strong className="text-slate-900 font-bold">{author}</strong>
                                 ) : author}
                                 {i < paper.authors.length - 1 ? ", " : "."}
                             </span>
@@ -77,7 +89,7 @@ const PaperCard: React.FC<{ paper: Paper }> = ({ paper }) => {
                     </p>
 
                     {/* Meta info (Venue + Year) */}
-                    <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm">
+                    <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm ml-7"> {/* 新增 ml-7 讓期刊資訊與標題文字對齊 */}
                         <span className="font-serif text-slate-900 font-medium">{paper.venue}</span>
                         <span className="font-serif text-slate-900 font-medium">{paper.year}</span>
                     </div>
@@ -99,8 +111,7 @@ const PaperCard: React.FC<{ paper: Paper }> = ({ paper }) => {
             </div>
 
             {/* Actions */}
-
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className="mt-3 flex flex-wrap gap-2 ml-7"> {/* 新增 ml-7 對齊 */}
                 {paper.links.pdf && <ActionButton icon={<FileText size={16} />} label="PDF" href={paper.links.pdf} />}
                 {paper.links.bibtex && <ActionButton icon={<Quote size={16} />} label="BibTeX" onClick={() => alert("BibTeX copied to clipboard (Simulated)")} />}
                 {paper.links.code && <ActionButton icon={<Code size={16} />} label="Code" href={paper.links.code} />}

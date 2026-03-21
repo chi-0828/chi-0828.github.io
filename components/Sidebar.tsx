@@ -29,7 +29,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ className = "", onNavClick }) 
                     <img 
                         src={PROFILE.avatarUrl} 
                         alt="Profile" 
-                        className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full shadow-lg border-4 border-slate-50"
+                        className="w-32 h-32 md:w-40 md:h-40 object-cover object-center rounded-full shadow-lg border-4 border-slate-50"
+                        style={{ 
+                            imageRendering: '-webkit-optimize-contrast',
+                            transform: 'translateZ(0)' 
+                        }}
                     />
                 </div>
 
