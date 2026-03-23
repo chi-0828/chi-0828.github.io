@@ -89,44 +89,63 @@ export const NEWS: NewsItem[] = [
     }
 ];
 
-export const AWARDS: AwardItem[] = [
+export const AWARDS = [
     {
-        id: '1',
-        title: "Google APAC Student Travel Grant",
-        category: "Scholarship",
-        description: "for ISLPED 2025"
+        id: 1,
+        title: 'Outstanding Students Conference Travel Grant',
+        description: 'Travel Grant for DATE',
+        year: '2026',
+        issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
     },
     {
-        id: '2',
-        title: "NTU Doctoral Royal Palm Elite Scholarship",
-        category: "Scholarship",
-        description: "National Taiwan University (up to 4 year)"
+        id: 1,
+        title: 'Google Conference Scholarship',
+        description: 'APAC Student Travel Grant for ISLPED',
+        year: '2025',
+        issuer: 'Google',
     },
     {
-        id: '3',
-        title: "Best Master Thesis Award",
-        category: "Paper",
-        description: "IEEE Tainan Section, 2023"
+        id: 2,
+        title: 'NTU Doctoral Royal Palm Elite Scholarship',
+        description: '4-year full fellowship (Highly competitive; top incoming Ph.D. students)',
+        year: '2023',
+        issuer: 'National Taiwan University',
     },
     {
-        id: '4',
-        title: "Student Thesis Award (Master thesis) ",
-        category: "Paper",
-        description: "Taiwan Information Storage Association, 2023"
+        id: 3,
+        title: 'Best Master Thesis Award',
+        description: 'For thesis on PIM system optimization',
+        year: '2023',
+        issuer: 'IEEE Tainan Section',
     },
     {
-        id: '5',
-        title: "Google APAC Student Travel Grant",
-        category: "Scholarship",
-        description: "for DAC 2023"
+        id: 4,
+        title: 'Outstanding Student Thesis Award (Master’s Level)',
+        description: 'For thesis on PIM system optimization',
+        year: '2023',
+        issuer: 'Taiwan Information Storage Association (TISA)',
     },
     {
-        id: '6',
-        title: "President Award",
-        category: "Scholarship",
-        description: "Semester-top Academic Performance in CCU, 2020"
-    }
-    
+        id: 5,
+        title: 'Google Conference Scholarship',
+        description: 'APAC Student Travel Grant for DAC',
+        year: '2023',
+        issuer: 'Google',
+    },
+    {
+        id: 1,
+        title: 'Outstanding Students Conference Travel Grant',
+        description: 'Travel Grant for DAC',
+        year: '2023',
+        issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
+    },
+    {
+        id: 6,
+        title: 'President’s Award',
+        description: 'Semester-top academic performance (Top 2 in department)',
+        year: '2020',
+        issuer: 'National Chung Cheng University',
+    },
 ];
 
 export const PAPERS: Paper[] = [

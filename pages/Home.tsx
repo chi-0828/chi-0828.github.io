@@ -145,28 +145,42 @@ export const Home: React.FC = () => {
 
             {/* Awards */}
             <section id="awards" className="scroll-mt-24">
-                <div className="flex items-center space-x-2 mb-6">
+                <div className="flex items-center space-x-2 mb-4">
                     <Trophy className="text-amber-500" />
                     <h2 className="text-xl font-bold text-slate-800">Honors and Awards</h2>
                 </div>
-                <div className="bg-white p-4 md:p-8 rounded-3xl shadow-sm border border-slate-200 relative overflow-hidden group">
-                    <div className="absolute -right-8 -bottom-8 opacity-5 group-hover:opacity-10 transition-opacity duration-700"> 
-                        <Trophy size={140} className="text-slate-900" />
-                    </div>
-                    <div className="relative z-7 space-y-3">
-                        {AWARDS.map((award, index) => (
-                            <React.Fragment key={award.id}>
-                                {index > 0 && <div className="w-full h-px bg-slate-100"></div>}
-                                <div>
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <span className={`inline-block w-2 h-2 rounded-full bg-slate-400`}></span>
-                                        <p className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">{award.category}</p>
-                                    </div>
-                                    <h4 className="font-bold text-base text-slate-900 leading-tight">{award.title}</h4>
-                                    <p className="text-xs text-slate-500 mt-1">{award.description}</p>
-                                </div>
-                            </React.Fragment>
-                        ))}
+
+                <div className="bg-white px-4 md:px-6 py-4 md:py-5 rounded-3xl shadow-sm border border-slate-200">
+                    <div>
+                    {AWARDS.map((award, index) => (
+                        <React.Fragment key={award.id}>
+                        {index > 0 && <div className="border-t border-slate-100" />}
+
+                        <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-1 md:gap-4 py-3">
+                            {/* Left */}
+                            <div className="min-w-0">
+                            <h4 className="text-sm font-semibold text-slate-800 leading-6">
+                                {award.title}
+                            </h4>
+                            {award.description && (
+                                <p className="text-sm text-slate-500 italic leading-6">
+                                {award.description}
+                                </p>
+                            )}
+                            </div>
+
+                            {/* Right */}
+                            <div className="md:text-right leading-6">
+                            <p className="text-sm font-semibold text-slate-700">
+                                {award.year}
+                            </p>
+                            <p className="text-sm text-slate-500">
+                                {award.issuer}
+                            </p>
+                            </div>
+                        </div>
+                        </React.Fragment>
+                    ))}
                     </div>
                 </div>
             </section>
