@@ -1,188 +1,151 @@
 import React from 'react';
-import { School, Briefcase, Flame, Trophy, CheckCircle2, Contact, Code2, Cpu } from 'lucide-react';
-import { EDUCATION, EXPERIENCE, NEWS, AWARDS } from '../constants';
+import { Mail, Github, GraduationCap, Linkedin } from 'lucide-react';
+import { EDUCATION, EXPERIENCE, NEWS, AWARDS, PROFILE } from '../constants';
+
+const contacts = [
+    { href: `mailto:${PROFILE.email}`, icon: Mail, label: 'Email', ext: false },
+    { href: 'https://github.com/chi-0828', icon: Github, label: 'GitHub', ext: true },
+    { href: 'https://scholar.google.com.tw/citations?user=SoyMWUsAAAA', icon: GraduationCap, label: 'Scholar', ext: true },
+    { href: 'https://www.linkedin.com/in/liang-chi-chen-882a531b9', icon: Linkedin, label: 'LinkedIn', ext: true },
+];
+
+const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <div className="flex items-center gap-3 mb-6">
+        <span className="w-1.5 h-5 rounded-full bg-accent" />
+        <h2 className="font-arial text-lg font-bold tracking-tight text-ink uppercase">{children}</h2>
+    </div>
+);
+
+// One timeline entry: date on the left, a node on the rail, content on the right.
+const TimelineItem: React.FC<{ date: string; children: React.ReactNode }> = ({ date, children }) => (
+    <div className="grid grid-cols-[58px_1fr] sm:grid-cols-[96px_1fr] gap-x-3 sm:gap-x-5">
+        <div className="text-right pt-3">
+            <span className="font-mono text-[11px] sm:text-xs text-faint leading-tight">{date}</span>
+        </div>
+        <div className="relative border-l border-line pl-5 sm:pl-7 pb-5 last:pb-0">
+            <span className="absolute -left-[5px] top-3.5 w-2.5 h-2.5 rounded-full bg-surface border-2 border-accent" />
+            {children}
+        </div>
+    </div>
+);
+
+const cardClass =
+    'group relative flex items-start gap-3.5 rounded-xl border border-line bg-surface px-4 py-3 ' +
+    'transition-all duration-200 cursor-default ' +
+    'hover:bg-[#dce7f8] hover:border-accent hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-1';
 
 export const Home: React.FC = () => {
     return (
-        <div className="max-w-4xl mx-auto space-y-10 md:space-y-15">
-            <section className="mb-12 scroll-mt-24" id="about">
-                {/* 標題區 */}
-                <div className="flex items-center gap-3 mb-6">
-                    <div className="p-2 rounded-lg">
-                        <Contact className="text-slate-700" size={24} />
-                    </div>
-                    <h2 className="text-2xl font-bold text-slate-800">Hello, I'm Liang-Chi Chen.</h2>
-                </div>
-
-                {/* 內容卡片 */}
-                <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
-                    <p className="text-slate-800 text-base mb-4">
-                        I am currently a PhD Candidate at National Taiwan University, 
-                        specializing in Embedded Systems and 
-                        Memory/Storage Systems/Devices.
-                        My PhD research focuses on Processing-in-Memory (PIM) and In-Storage Computing accelerators. 
-                        I also work on optimizations for NAND flash, emerging NVM (e.g., ReRAM or persistent memory), and CXL systems.
+        <div className="animate-rise">
+            {/* Intro — fills the width */}
+            <section className="flex flex-col sm:flex-row sm:items-center gap-7 mb-9">
+                <img
+                    src={PROFILE.avatarUrl}
+                    alt="Liang-Chi Chen"
+                    width={128}
+                    height={128}
+                    decoding="async"
+                    // @ts-ignore - valid HTML attribute
+                    fetchpriority="high"
+                    className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover object-center shadow-soft shrink-0"
+                />
+                <div>
+                    <h1 className="font-arial text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-none">
+                        Liang-Chi Chen
+                    </h1>
+                    <p className="font-arial text-[15px] text-muted mt-2.5">
+                        Ph.D. Candidate · National Taiwan University
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6 border-t border-slate-100">
-                        <div className="flex items-start gap-3">
-                            <Cpu className="text-slate-400 mt-1" size={20} />
-                            <div>
-                                <h3 className="font-bold text-slate-800 text-sm uppercase tracking-wider">Research Interest</h3>
-                                <p className="text-slate-500 text-sm mt-1">Memory Systems, Storage, PIM, Accelerators</p>
-                            </div>
-                        </div>
-                        <div className="flex items-start gap-3">
-                            <Code2 className="text-slate-400 mt-1" size={20} />
-                            <div>
-                                <h3 className="font-bold text-slate-800 text-sm uppercase tracking-wider">Programming</h3>
-                                <p className="text-slate-500 text-sm mt-1">C/C++, Python</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {/* Education Section */}
-            <section id="education" className="scroll-mt-24">
-                <div className="flex items-center space-x-2 mb-4">
-                    <School className="text-slate-600" />
-                    <h2 className="text-xl font-bold text-slate-800">Education</h2>
-                </div>
-                <div className="bg-white px-4 md:px-5 pt-3 pb-5 rounded-3xl shadow-sm border border-slate-200">
-                    <div className="relative space-y-4">
-                        {/* Vertical Line */}
-                        <div className="absolute top-2 bottom-2 left-7 w-px bg-slate-200 -translate-x-1/2"></div>
-                        
-                        {EDUCATION.map((edu, index) => (
-                            <div key={edu.id} className={`relative flex gap-4 md:gap-6 group`}>
-                                <div className="relative z-10 flex-shrink-0 w-14 h-14 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex items-center justify-center p-1">
-                                    <img 
-                                        src={edu.logo} 
-                                        alt={edu.school} 
-                                        className="w-full h-full object-contain" 
-                                    />
-                                </div>
-                                <div className="flex-grow pt-1">
-                                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-1">
-                                        <h3 className="font-bold text-base text-slate-900">{edu.school}</h3>
-                                        <span className="text-xs bg-slate-100 px-2 py-1 rounded-md">{edu.period}</span>
-                                    </div>
-                                    <p className="text-slate-600 text-sm">{edu.degree}</p>
-                                    {edu.status && (
-                                        <p className="text-sm text-slate-500 mt-2 flex items-center">
-                                            <CheckCircle2 size={14} className="mr-1 text-emerald-600" />
-                                            {edu.status}
-                                        </p>
-                                    )}
-                                </div>
-                            </div>
+                    <div className="flex items-center gap-4 mt-4">
+                        {contacts.map(({ href, icon: Icon, label, ext }) => (
+                            <a
+                                key={label}
+                                href={href}
+                                aria-label={label}
+                                {...(ext ? { target: '_blank', rel: 'noreferrer' } : {})}
+                                className="text-faint hover:text-accent transition-colors"
+                            >
+                                <Icon size={19} strokeWidth={1.75} />
+                            </a>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Experience Section */}
-            <section id="experience" className="scroll-mt-24">
-                <div className="flex items-center space-x-2 mb-3">
-                    <Briefcase className="text-slate-600" />
-                    <h2 className="text-xl font-bold text-slate-800">Experience</h2>
-                </div>
-                <div className="bg-white px-4 md:px-5 pt-3 pb-5 rounded-3xl shadow-sm border border-slate-200">
-                    <div className="relative space-y-4">
-                        {/* Vertical Line */}
-                        <div className="absolute top-2 bottom-2 left-7 w-px bg-slate-200 -translate-x-1/2"></div>
+            <p className="text-[15.5px] leading-[1.75] text-ink/85 max-w-3xl mb-14">
+                I am currently a PhD Candidate at National Taiwan University, specializing in Embedded
+                Systems and Memory/Storage Systems/Devices. My PhD research focuses on Processing-in-Memory
+                (PIM) and In-Storage Computing accelerators. I also work on optimizations for NAND flash,
+                emerging NVM (e.g., ReRAM or persistent memory), and CXL systems.
+            </p>
 
-                        {EXPERIENCE.map((exp) => (
-                            <div key={exp.id} className="relative flex gap-4 md:gap-6 group">
-                                <div className="relative z-10 flex-shrink-0 w-14 h-14 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex items-center justify-center p-1 group-hover:border-slate-400 transition-colors">
-                                    <img 
-                                        src={exp.logo} 
-                                        alt={exp.company} 
-                                        className="w-full h-full object-contain" 
-                                    />
-                                </div>
-                                <div className="flex-grow pt-1">
-                                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
-                                        <h3 className="font-bold text-base text-slate-900 group-hover:text-slate-700 transition-colors">{exp.role}</h3>
-                                        <span className="text-xs bg-slate-100 px-2 py-1 rounded-md">{exp.period}</span>
-                                    </div>
-                                    <p className="text-slate-600 font-medium text-sm mb-2">{exp.company}</p>
-                                    <p className="text-sm text-slate-600 leading-relaxed">
-                                        {exp.description}
-                                    </p>
+            {/* Education */}
+            <section className="mb-14">
+                <SectionTitle>Education</SectionTitle>
+                <div>
+                    {EDUCATION.map((edu) => (
+                        <TimelineItem key={edu.id} date={edu.period}>
+                            <div className={cardClass}>
+                                <img src={edu.logo} alt={edu.school} loading="lazy" decoding="async" width={40} height={40} className="w-10 h-10 rounded-md object-contain bg-white border border-line p-1 shrink-0" />
+                                <div className="min-w-0">
+                                    <h3 className="text-[15px] font-semibold text-ink group-hover:text-accent transition-colors">{edu.school}</h3>
+                                    <p className="text-[14px] text-muted group-hover:text-ink mt-0.5 transition-colors">{edu.degree}</p>
+                                    {edu.status && <p className="text-[13px] text-accent mt-1">{edu.status}</p>}
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </TimelineItem>
+                    ))}
                 </div>
             </section>
 
-            {/* Latest News */}
-            <section id="news" className="scroll-mt-24">
-                <div className="flex items-center space-x-2 mb-4">
-                    <Flame className="text-slate-500" />
-                    <h2 className="text-xl font-bold text-slate-800">Latest News</h2>
-                </div>
-                <div className="bg-white p-4 md:p-6 rounded-3xl shadow-sm border border-slate-200">
-                    <ul className="space-y-3">
-                        {NEWS.map((item, index) => (
-                            <li key={item.id} className="relative pl-4">
-                                <div className="absolute left-0 top-2 w-1.5 h-1.5 bg-slate-400 rounded-full"></div>
-                                
-                                <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
-                                    <span className="shrink-0 text-xs font-bold text-slate-500 w-20">
-                                        {item.monthYear}
-                                    </span>
-                                    
-                                    <p className="text-sm text-slate-700 leading-relaxed">
-                                        {item.content}
-                                    </p>
+            {/* Experience */}
+            <section className="mb-14">
+                <SectionTitle>Experience</SectionTitle>
+                <div>
+                    {EXPERIENCE.map((exp) => (
+                        <TimelineItem key={exp.id} date={exp.period}>
+                            <div className={cardClass}>
+                                <img src={exp.logo} alt={exp.company} loading="lazy" decoding="async" width={40} height={40} className="w-10 h-10 rounded-md object-contain bg-white border border-line p-1 shrink-0" />
+                                <div className="min-w-0">
+                                    <h3 className="text-[15px] font-semibold text-ink group-hover:text-accent transition-colors">{exp.role}</h3>
+                                    <p className="text-[14px] text-muted group-hover:text-ink mt-0.5 transition-colors">{exp.company}</p>
+                                    <p className="text-[14px] text-ink/70 group-hover:text-ink mt-1 leading-relaxed transition-colors">{exp.description}</p>
                                 </div>
-                            </li>
-                        ))}
-                    </ul>
+                            </div>
+                        </TimelineItem>
+                    ))}
+                </div>
+            </section>
+
+            {/* News */}
+            <section className="mb-14">
+                <SectionTitle>News</SectionTitle>
+                <div>
+                    {NEWS.map((item) => (
+                        <TimelineItem key={item.id} date={item.monthYear}>
+                            <p className="text-[14.5px] text-ink/85 leading-relaxed pt-2">{item.content}</p>
+                        </TimelineItem>
+                    ))}
                 </div>
             </section>
 
             {/* Awards */}
-            <section id="awards" className="scroll-mt-24">
-                <div className="flex items-center space-x-2 mb-4">
-                    <Trophy className="text-amber-500" />
-                    <h2 className="text-xl font-bold text-slate-800">Honors and Awards</h2>
-                </div>
-
-                <div className="bg-white px-4 md:px-6 py-4 md:py-5 rounded-3xl shadow-sm border border-slate-200">
-                    <div>
-                    {AWARDS.map((award, index) => (
-                        <React.Fragment key={award.id}>
-                        {index > 0 && <div className="border-t border-slate-100" />}
-
-                        <div className="grid grid-cols-1 md:grid-cols-[1fr_350px] gap-1 md:gap-4 py-3">
-                            {/* Left */}
+            <section>
+                <SectionTitle>Honors &amp; Awards</SectionTitle>
+                <ul className="divide-y divide-line">
+                    {AWARDS.map((award) => (
+                        <li key={award.id} className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-x-4 gap-y-0.5 py-3.5">
                             <div className="min-w-0">
-                            <h4 className="text-sm font-semibold text-slate-800 leading-6">
-                                {award.title}
-                            </h4>
-                            {award.description && (
-                                <p className="text-sm text-slate-500 italic leading-6">
-                                {award.description}
-                                </p>
-                            )}
+                                <p className="text-[14.5px] text-ink leading-snug">{award.title}</p>
+                                {award.description && <p className="text-[13px] text-muted italic">{award.description}</p>}
                             </div>
-
-                            {/* Right */}
-                            <div className="md:text-right leading-6">
-                            <p className="text-sm font-semibold text-slate-700">
-                                {award.year}
-                            </p>
-                            <p className="text-sm text-slate-500">
-                                {award.issuer}
-                            </p>
+                            <div className="sm:text-right shrink-0">
+                                <span className="font-mono text-xs text-faint">{award.year}</span>
+                                <p className="text-[13px] text-muted">{award.issuer}</p>
                             </div>
-                        </div>
-                        </React.Fragment>
+                        </li>
                     ))}
-                    </div>
-                </div>
+                </ul>
             </section>
         </div>
     );

@@ -5,7 +5,7 @@ export const PROFILE = {
     name: "Liang-Chi Chen",
     role: "Ph.D. Candidate @ NTU",
     description: "",
-    avatarUrl: "./img/IMG_9944.png",
+    avatarUrl: "./img/avatar.webp",
     email: "d12922012@csie.ntu.edu.tw",
     cvLink: "https://drive.google.com/file/d/1SPdbV0K-WWWTIN8mp3M-mGBy6eQP2hvc/view?usp=sharing"
 };
@@ -40,7 +40,7 @@ export const EXPERIENCE: ExperienceItem[] = [
         id: '1',
         role: "Software Engineering Intern, PhD",
         company: "Google, Taiwan", 
-        period: "Summer 2026 (upcoming)",
+        period: "Summer 2026",
         description: "TPU software/firmware team.",
         logo: '/img/google.jfif'
     },

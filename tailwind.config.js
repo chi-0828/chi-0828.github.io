@@ -2,28 +2,30 @@
 export default {
   content: [
     "./index.html",
-    // 1. 只掃描「根目錄」下的檔案 (例如 App.tsx, main.tsx)
-    // 注意：這裡只有一個星號 *，代表不進入子資料夾
-    "./*.{js,ts,jsx,tsx}", 
-    
-    // 2. 指定掃描 components 資料夾 (如果有)
+    "./*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    
-    // 3. 指定掃描 pages 資料夾 (如果有)
     "./pages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        // 把你原本寫在 HTML script 裡的顏色設定搬來這裡
-        primary: "#334155",
-        "primary-dark": "#1e293b",
-        "background-light": "#f8fafc",
-        "background-dark": "#0f172a",
+        paper: "#fbfaf7",     // warm off-white background
+        surface: "#ffffff",
+        ink: "#23262e",       // primary text
+        muted: "#6b7280",     // secondary text
+        faint: "#9ca3af",
+        line: "#eceae4",      // hairline borders
+        accent: "#3a5a9c",    // calm professional blue
+        "accent-soft": "#eef2f8",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        arial: ["Arial", "Helvetica", "system-ui", "sans-serif"],
+        serif: ["Newsreader", "Georgia", "serif"],
+        sans: ["IBM Plex Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["IBM Plex Mono", "ui-monospace", "monospace"],
+      },
+      boxShadow: {
+        soft: "0 1px 2px rgba(35,38,46,0.04), 0 8px 24px -16px rgba(35,38,46,0.18)",
       },
     },
   },
