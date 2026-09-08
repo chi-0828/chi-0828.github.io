@@ -55,6 +55,9 @@ export interface NewsItem {
 export interface AwardItem {
     id: string;
     title: string;
-    category: string;
-    description: string;
+    description?: string;
+    year: string;
+    issuer: string;
+    /** Renders the award as a featured card above the rest of the list. */
+    highlight?: boolean;
 }

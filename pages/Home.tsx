@@ -1,8 +1,11 @@
 import React from 'react';
-import { School, Briefcase, Flame, Trophy, CheckCircle2, Contact, Code2, Cpu } from 'lucide-react';
+import { School, Briefcase, Flame, Trophy, CheckCircle2, Contact, Code2, Cpu, Sparkles } from 'lucide-react';
 import { EDUCATION, EXPERIENCE, NEWS, AWARDS } from '../constants';
 
 export const Home: React.FC = () => {
+    const featuredAwards = AWARDS.filter((award) => award.highlight);
+    const otherAwards = AWARDS.filter((award) => !award.highlight);
+
     return (
         <div className="max-w-4xl mx-auto space-y-10 md:space-y-15">
             <section className="mb-12 scroll-mt-24" id="about">
@@ -151,8 +154,52 @@ export const Home: React.FC = () => {
                 </div>
 
                 <div className="bg-white px-4 md:px-6 py-4 md:py-5 rounded-3xl shadow-sm border border-slate-200">
+                    {/* Featured awards */}
+                    {featuredAwards.length > 0 && (
+                        <div className="space-y-3 mb-2">
+                            {featuredAwards.map((award) => (
+                                <div
+                                    key={award.id}
+                                    className="rounded-2xl border border-amber-300 bg-gradient-to-br from-amber-50 via-amber-50/50 to-white px-4 py-4 md:px-5"
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center">
+                                            <Sparkles className="text-amber-600" size={18} />
+                                        </div>
+                                        <div className="min-w-0 flex-grow grid grid-cols-1 md:grid-cols-[1fr_200px] gap-1 md:gap-4">
+                                            {/* Left */}
+                                            <div className="min-w-0">
+                                                <span className="inline-block mb-1.5 text-[10px] font-bold uppercase tracking-wider text-amber-800 bg-amber-100 border border-amber-200 px-2 py-0.5 rounded-full">
+                                                    Latest Honor
+                                                </span>
+                                                <h4 className="text-base font-bold text-slate-900 leading-6">
+                                                    {award.title}
+                                                </h4>
+                                                {award.description && (
+                                                    <p className="text-sm text-slate-600 italic leading-6">
+                                                        {award.description}
+                                                    </p>
+                                                )}
+                                            </div>
+
+                                            {/* Right */}
+                                            <div className="md:text-right leading-6 md:pt-7">
+                                                <p className="text-sm font-bold text-slate-800">
+                                                    {award.year}
+                                                </p>
+                                                <p className="text-sm text-slate-600">
+                                                    {award.issuer}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
                     <div>
-                    {AWARDS.map((award, index) => (
+                    {otherAwards.map((award, index) => (
                         <React.Fragment key={award.id}>
                         {index > 0 && <div className="border-t border-slate-100" />}
 
