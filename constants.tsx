@@ -65,24 +65,30 @@ export const EXPERIENCE: ExperienceItem[] = [
 export const NEWS: NewsItem[] = [
     {
         id: '1',
+        date: "2026-09",
+        monthYear: "2026-09",
+        content: <span>Honored to receive the <strong className="text-red-700">2026 Google PhD Fellowship</strong> in Silicon Research (East Asia)</span>
+    },
+    {
+        id: '2',
         date: "2026-01",
         monthYear: "2026-01",
         content: <span>Offer accepted: <strong className="text-red-700">Google</strong> PhD Summer Intern (2026)</span>
     },
     {
-        id: '2',
+        id: '3',
         date: "2025-11",
         monthYear: "2025-11",
         content: <span>Paper accepted by <strong className="text-red-700">DATE 2026</strong> (Processing-in-Memory)</span>
     },
     {
-        id: '3',
+        id: '4',
         date: "2025-05",
         monthYear: "2025-05",
         content: <span>Paper accepted by <strong className="text-red-700">ISLPED 2025</strong> (In-Storage Computing)</span>
     },
     {
-        id: '4',
+        id: '5',
         date: "2025-04",
         monthYear: "2025-04",
         content: <span>Paper accepted by <strong className="text-red-700">IEEE TC</strong></span>
@@ -92,55 +98,63 @@ export const NEWS: NewsItem[] = [
 export const AWARDS = [
     {
         id: 1,
+        title: 'Google PhD Fellowship',
+        description: 'East Asia · Silicon Research (Algorithms, Architecture, Open Source Tooling)',
+        year: '2026',
+        issuer: 'Google',
+        featured: true,
+    },
+    {
+        id: 2,
         title: 'Outstanding Students Conference Travel Grant',
         description: 'Travel Grant for DATE',
         year: '2026',
         issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
     },
     {
-        id: 1,
+        id: 3,
         title: 'Google Conference Scholarship',
         description: 'APAC Student Travel Grant for ISLPED',
         year: '2025',
         issuer: 'Google',
     },
     {
-        id: 2,
+        id: 4,
         title: 'NTU Doctoral Royal Palm Elite Scholarship',
         description: '4-year full fellowship (Highly competitive; top incoming Ph.D. students)',
         year: '2023',
         issuer: 'National Taiwan University',
     },
     {
-        id: 3,
+        id: 5,
         title: 'Best Master Thesis Award',
         description: 'For thesis on PIM system optimization',
         year: '2023',
         issuer: 'IEEE Tainan Section',
     },
     {
-        id: 4,
+        id: 6,
         title: 'Outstanding Student Thesis Award (Master’s Level)',
         description: 'For thesis on PIM system optimization',
         year: '2023',
         issuer: 'Taiwan Information Storage Association (TISA)',
     },
     {
-        id: 5,
+        id: 7,
         title: 'Google Conference Scholarship',
         description: 'APAC Student Travel Grant for DAC',
         year: '2023',
         issuer: 'Google',
     },
     {
-        id: 1,
+        id: 8,
         title: 'Outstanding Students Conference Travel Grant',
         description: 'Travel Grant for DAC',
         year: '2023',
         issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
     },
     {
-        id: 6,
+        id: 9,
         title: 'President’s Award',
         description: 'Semester-top academic performance (Top 2 in department)',
         year: '2020',

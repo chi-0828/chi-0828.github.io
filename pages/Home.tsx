@@ -132,16 +132,24 @@ export const Home: React.FC = () => {
             {/* Awards */}
             <section>
                 <SectionTitle>Honors &amp; Awards</SectionTitle>
+
                 <ul className="divide-y divide-line">
                     {AWARDS.map((award) => (
                         <li key={award.id} className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-x-4 gap-y-0.5 py-3.5">
                             <div className="min-w-0">
-                                <p className="text-[14.5px] text-ink leading-snug">{award.title}</p>
-                                {award.description && <p className="text-[13px] text-muted italic">{award.description}</p>}
+                                {/* Flagship honors stay in the same row rhythm — only weight and color change. */}
+                                <p className={award.featured ? 'text-[14.5px] font-bold text-accent leading-snug' : 'text-[14.5px] text-ink leading-snug'}>
+                                    {award.title}
+                                </p>
+                                {award.description && (
+                                    <p className={award.featured ? 'text-[13px] text-accent/80 italic' : 'text-[13px] text-muted italic'}>
+                                        {award.description}
+                                    </p>
+                                )}
                             </div>
                             <div className="sm:text-right shrink-0">
-                                <span className="font-mono text-xs text-faint">{award.year}</span>
-                                <p className="text-[13px] text-muted">{award.issuer}</p>
+                                <span className={award.featured ? 'font-mono text-xs font-semibold text-accent' : 'font-mono text-xs text-faint'}>{award.year}</span>
+                                <p className={award.featured ? 'text-[13px] font-medium text-accent/90' : 'text-[13px] text-muted'}>{award.issuer}</p>
                             </div>
                         </li>
                     ))}
