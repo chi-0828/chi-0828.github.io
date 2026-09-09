@@ -7,7 +7,7 @@ export const PROFILE = {
     description: "",
     avatarUrl: "./img/avatar.webp",
     email: "d12922012@csie.ntu.edu.tw",
-    cvLink: "https://drive.google.com/file/d/1SPdbV0K-WWWTIN8mp3M-mGBy6eQP2hvc/view?usp=sharing"
+    cvLink: "https://drive.google.com/file/d/1HLpfbAtE2ratXp0CD2LWCkjgkydYV4ii/view?usp=sharing"
 };
 
 export const EDUCATION: EducationItem[] = [
