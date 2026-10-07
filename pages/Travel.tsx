@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Globe from 'react-globe.gl';
 import { Plus, Upload, Download, Trash2, X } from 'lucide-react';
 import {
-    Trip, DEFAULT_TRIPS, fetchTrips,
+    Trip, fetchTrips,
     tripsToCSV, csvToTrips, downloadFile,
 } from '../components/travel';
 import { CityAutocomplete, CityValue } from '../components/CityAutocomplete';
@@ -27,7 +27,7 @@ export const Travel: React.FC = () => {
 
     const [width, setWidth] = useState(640);
     const [ready, setReady] = useState(false);
-    const [trips, setTrips] = useState<Trip[]>(DEFAULT_TRIPS);
+    const [trips, setTrips] = useState<Trip[]>([]);
     const [showForm, setShowForm] = useState(false);
     const [form, setForm] = useState<FormState>(emptyForm);
 
@@ -185,7 +185,7 @@ export const Travel: React.FC = () => {
                         <button onClick={() => fileRef.current?.click()} className={btn}><Upload size={14} /> Import</button>
                         <button onClick={() => downloadFile('trips.json', JSON.stringify(trips, null, 2), 'application/json')} className={btn}><Download size={14} /> Export JSON</button>
                         <button onClick={() => downloadFile('trips.csv', tripsToCSV(trips), 'text/csv')} className={btn}><Download size={14} /> Export CSV</button>
-                        <button onClick={() => { if (confirm('Reset to the default list?')) setTrips(DEFAULT_TRIPS); }} className={`${btn} text-muted`}>Reset</button>
+                        <button onClick={() => { if (confirm('Discard local edits and reload the committed trips.json?')) fetchTrips().then(setTrips); }} className={`${btn} text-muted`}>Reload committed</button>
                         <input ref={fileRef} type="file" accept=".json,.csv" onChange={onImport} className="hidden" />
                     </div>
 
@@ -198,7 +198,7 @@ export const Travel: React.FC = () => {
                             <div className="grid sm:grid-cols-2 gap-3">
                                 <CityAutocomplete label="From" value={form.from} onChange={(v) => setForm((f) => ({ ...f, from: v }))} />
                                 <CityAutocomplete label="To *" value={form.to} onChange={(v) => setForm((f) => ({ ...f, to: v }))} />
-                                <TextField label="Date (YYYY-MM)" value={form.date} onChange={(v) => setForm((f) => ({ ...f, date: v }))} />
+                                <TextField label="Date (YYYY-MM-DD)" value={form.date} onChange={(v) => setForm((f) => ({ ...f, date: v }))} />
                                 <TextField label="Label" value={form.label} onChange={(v) => setForm((f) => ({ ...f, label: v }))} />
                             </div>
                             <div className="mt-3 flex justify-end">

@@ -1,5 +1,5 @@
-// Travel history. Each trip carries its own coordinates so users can add
-// arbitrary cities without editing a separate lookup table.
+// Travel history. Each trip carries its own coordinates so arbitrary cities
+// can be added without editing a separate lookup table.
 export interface Trip {
     id: string;
     fromName: string;
@@ -9,37 +9,16 @@ export interface Trip {
     toLat: number;
     toLng: number;
     label: string;
-    date: string; // YYYY-MM
+    date: string; // YYYY-MM-DD (used for sorting)
 }
 
-const TPE = { name: 'Taipei', lat: 25.03, lng: 121.56 };
-const mk = (
-    from: { name: string; lat: number; lng: number },
-    to: { name: string; lat: number; lng: number },
-    label: string,
-    date: string
-): Trip => ({
-    id: `${date}-${to.name}`.replace(/\s+/g, '_'),
-    fromName: from.name, fromLat: from.lat, fromLng: from.lng,
-    toName: to.name, toLat: to.lat, toLng: to.lng,
-    label, date,
-});
-
-export const DEFAULT_TRIPS: Trip[] = [
-    mk(TPE, { name: 'Tokyo', lat: 35.68, lng: 139.69 }, 'ASPLOS — paper presentation', '2023-03'),
-    mk(TPE, { name: 'Seoul', lat: 37.57, lng: 126.98 }, 'Research visit', '2023-08'),
-    mk(TPE, { name: 'Singapore', lat: 1.35, lng: 103.82 }, 'Summer internship', '2022-07'),
-    mk(TPE, { name: 'Hong Kong', lat: 22.32, lng: 114.17 }, 'MICRO workshop', '2024-02'),
-    mk(TPE, { name: 'San Francisco', lat: 37.77, lng: -122.42 }, 'ISCA — conference', '2024-06'),
-    mk({ name: 'San Francisco', lat: 37.77, lng: -122.42 }, { name: 'New York', lat: 40.71, lng: -74.01 }, 'Lab visit', '2024-06'),
-    mk(TPE, { name: 'Vancouver', lat: 49.28, lng: -123.12 }, 'USENIX FAST', '2025-02'),
-    mk(TPE, { name: 'Munich', lat: 48.14, lng: 11.58 }, 'DATE — conference', '2025-04'),
-    mk(TPE, { name: 'Sydney', lat: -33.87, lng: 151.21 }, 'Invited talk', '2025-09'),
-];
+// Shown only if public/trips.json cannot be loaded. Kept empty on purpose so the
+// globe never displays placeholder trips that never happened.
+export const DEFAULT_TRIPS: Trip[] = [];
 
 // Trips are served from a committed JSON file (public/trips.json) so the
 // published list is whatever is in the repo — only the owner can change it
-// (by editing that file via git). Falls back to the bundled defaults.
+// (by editing that file via git). Falls back to an empty list.
 export async function fetchTrips(): Promise<Trip[]> {
     try {
         const base = (import.meta as any).env?.BASE_URL ?? '/';

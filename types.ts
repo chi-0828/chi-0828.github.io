@@ -9,14 +9,13 @@ export enum PaperType {
 export interface Paper {
     id: string;
     title: string;
-    authors: string[]; // "Liang-Chi Chen" should be highlighted logic
+    authors: string[]; // entries equal to PROFILE.name are highlighted
     venue: string;
     year: string;
     type: PaperType;
     tags?: string[];
     links: {
         pdf?: string;
-        bibtex?: string;
         code?: string;
         slides?: string;
         arxiv?: string;
@@ -47,14 +46,15 @@ export interface ExperienceItem {
 
 export interface NewsItem {
     id: string;
-    date: string;
-    monthYear: string;
+    date: string; // YYYY-MM, shown on the timeline rail
     content: React.ReactNode;
 }
 
 export interface AwardItem {
-    id: string;
+    id: number;
     title: string;
-    category: string;
     description: string;
+    year: string;
+    issuer: string;
+    featured?: boolean; // flagship honors are emphasised in the list
 }

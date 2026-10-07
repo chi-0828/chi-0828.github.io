@@ -4,9 +4,9 @@ import { EDUCATION, EXPERIENCE, NEWS, AWARDS, PROFILE } from '../constants';
 
 const contacts = [
     { href: `mailto:${PROFILE.email}`, icon: Mail, label: 'Email', ext: false },
-    { href: 'https://github.com/chi-0828', icon: Github, label: 'GitHub', ext: true },
-    { href: 'https://scholar.google.com.tw/citations?user=SoyMWUsAAAA', icon: GraduationCap, label: 'Scholar', ext: true },
-    { href: 'https://www.linkedin.com/in/liang-chi-chen-882a531b9', icon: Linkedin, label: 'LinkedIn', ext: true },
+    { href: PROFILE.links.github, icon: Github, label: 'GitHub', ext: true },
+    { href: PROFILE.links.scholar, icon: GraduationCap, label: 'Scholar', ext: true },
+    { href: PROFILE.links.linkedin, icon: Linkedin, label: 'LinkedIn', ext: true },
 ];
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -41,21 +41,18 @@ export const Home: React.FC = () => {
             <section className="flex flex-col sm:flex-row sm:items-center gap-7 mb-9">
                 <img
                     src={PROFILE.avatarUrl}
-                    alt="Liang-Chi Chen"
+                    alt={PROFILE.name}
                     width={128}
                     height={128}
                     decoding="async"
-                    // @ts-ignore - valid HTML attribute
-                    fetchpriority="high"
+                    fetchPriority="high"
                     className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover object-center shadow-soft shrink-0"
                 />
                 <div>
                     <h1 className="font-arial text-4xl sm:text-5xl font-bold tracking-tight text-ink leading-none">
-                        Liang-Chi Chen
+                        {PROFILE.name}
                     </h1>
-                    <p className="font-arial text-[15px] text-muted mt-2.5">
-                        Ph.D. Candidate · National Taiwan University
-                    </p>
+                    <p className="font-arial text-[15px] text-muted mt-2.5">{PROFILE.role}</p>
                     <div className="flex items-center gap-4 mt-4">
                         {contacts.map(({ href, icon: Icon, label, ext }) => (
                             <a
@@ -72,12 +69,7 @@ export const Home: React.FC = () => {
                 </div>
             </section>
 
-            <p className="text-[15.5px] leading-[1.75] text-ink/85 max-w-3xl mb-14">
-                I am currently a PhD Candidate at National Taiwan University, specializing in Embedded
-                Systems and Memory/Storage Systems/Devices. My PhD research focuses on Processing-in-Memory
-                (PIM) and In-Storage Computing accelerators. I also work on optimizations for NAND flash,
-                emerging NVM (e.g., ReRAM or persistent memory), and CXL systems.
-            </p>
+            <p className="text-[15.5px] leading-[1.75] text-ink/85 max-w-3xl mb-14">{PROFILE.bio}</p>
 
             {/* Education */}
             <section className="mb-14">
@@ -122,7 +114,7 @@ export const Home: React.FC = () => {
                 <SectionTitle>News</SectionTitle>
                 <div>
                     {NEWS.map((item) => (
-                        <TimelineItem key={item.id} date={item.monthYear}>
+                        <TimelineItem key={item.id} date={item.date}>
                             <p className="text-[14.5px] text-ink/85 leading-relaxed pt-2">{item.content}</p>
                         </TimelineItem>
                     ))}

@@ -3,11 +3,16 @@ import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem } 
 
 export const PROFILE = {
     name: "Liang-Chi Chen",
-    role: "Ph.D. Candidate @ NTU",
-    description: "",
-    avatarUrl: "./img/avatar.webp",
+    role: "Ph.D. Candidate · National Taiwan University",
+    bio: "I am currently a PhD Candidate at National Taiwan University, specializing in Embedded Systems and Memory/Storage Systems/Devices. My PhD research focuses on Processing-in-Memory (PIM) and In-Storage Computing accelerators. I also work on optimizations for NAND flash, emerging NVM (e.g., ReRAM or persistent memory), and CXL systems.",
+    avatarUrl: "/img/avatar.webp",
     email: "d12922012@csie.ntu.edu.tw",
-    cvLink: "https://drive.google.com/file/d/1HLpfbAtE2ratXp0CD2LWCkjgkydYV4ii/view?usp=sharing"
+    cvLink: "https://drive.google.com/file/d/1HLpfbAtE2ratXp0CD2LWCkjgkydYV4ii/view?usp=sharing",
+    links: {
+        github: "https://github.com/chi-0828",
+        scholar: "https://scholar.google.com.tw/citations?user=SoyMWUsAAAA",
+        linkedin: "https://www.linkedin.com/in/liang-chi-chen-882a531b9",
+    },
 };
 
 export const EDUCATION: EducationItem[] = [
@@ -17,21 +22,21 @@ export const EDUCATION: EducationItem[] = [
         degree: "Ph.D. in Computer Science and Information Engineering",
         period: "2023 — Present",
         status: "Ph.D. Candidate (Advanced in Spring 2025)",
-        logo: "./img/ntu.jpg"
+        logo: "/img/ntu.jpg"
     },
     {
         id: '2',
         school: "National Cheng Kung University (NCKU)",
         degree: "M.S. in Computer Science and Information Engineering",
         period: "2022 — 2023",
-        logo: "./img/ncku.png"
+        logo: "/img/ncku.png"
     },
     {
         id: '3',
         school: "National Chung Cheng University (CCU)",
         degree: "B.S. in Computer Science and Information Engineering",
         period: "2018 — 2022",
-        logo: "./img/ccu.png"
+        logo: "/img/ccu.png"
     }
 ];
 
@@ -42,7 +47,7 @@ export const EXPERIENCE: ExperienceItem[] = [
         company: "Google, Taiwan", 
         period: "Summer 2026",
         description: "TPU software/firmware team.",
-        logo: '/img/google.jfif'
+        logo: '/img/google.jpg'
     },
     {
         id: '2',
@@ -65,37 +70,37 @@ export const EXPERIENCE: ExperienceItem[] = [
 export const NEWS: NewsItem[] = [
     {
         id: '1',
-        date: "2026-09",
-        monthYear: "2026-09",
-        content: <span>Honored to receive the <strong className="text-red-700">2026 Google PhD Fellowship</strong> in Silicon Research (East Asia)</span>
+        date: "2026-10",
+        content: <span>Paper accepted by <strong className="text-red-700">IEEE TC 2026</strong> (Processing-in-Memory)</span>
     },
     {
         id: '2',
-        date: "2026-01",
-        monthYear: "2026-01",
-        content: <span>Offer accepted: <strong className="text-red-700">Google</strong> PhD Summer Intern (2026)</span>
+        date: "2026-09",
+        content: <span>Honored to receive the <strong className="text-red-700">2026 Google PhD Fellowship</strong> in Silicon Research (East Asia)</span>
     },
     {
         id: '3',
-        date: "2025-11",
-        monthYear: "2025-11",
-        content: <span>Paper accepted by <strong className="text-red-700">DATE 2026</strong> (Processing-in-Memory)</span>
+        date: "2026-01",
+        content: <span>Offer accepted: <strong className="text-red-700">Google</strong> PhD Summer Intern (2026)</span>
     },
     {
         id: '4',
-        date: "2025-05",
-        monthYear: "2025-05",
-        content: <span>Paper accepted by <strong className="text-red-700">ISLPED 2025</strong> (In-Storage Computing)</span>
+        date: "2025-11",
+        content: <span>Paper accepted by <strong className="text-red-700">DATE 2026</strong> (Processing-in-Memory)</span>
     },
     {
         id: '5',
+        date: "2025-05",
+        content: <span>Paper accepted by <strong className="text-red-700">ISLPED 2025</strong> (In-Storage Computing)</span>
+    },
+    {
+        id: '6',
         date: "2025-04",
-        monthYear: "2025-04",
         content: <span>Paper accepted by <strong className="text-red-700">IEEE TC</strong></span>
     }
 ];
 
-export const AWARDS = [
+export const AWARDS: AwardItem[] = [
     {
         id: 1,
         title: 'Google PhD Fellowship',
@@ -166,6 +171,38 @@ export const PAPERS: Paper[] = [
     // --- Journal Papers ---
     {
         id: 'j1',
+        title: "Compute-Efficient Content-Defined Chunking for Deduplication on a Real Processing-in-Memory System",
+        authors: ["Liang-Chi Chen", "Xing-Yu Chen", "Chien-Chung Ho", "Chun-Le Yeh", "Da-Wei Chang", "Yu-Ming Chang"],
+        venue: "IEEE Transactions on Computers (TC)",
+        year: "2026",
+        type: PaperType.JOURNAL,
+        note: "To appear",
+        links: {}
+    },
+    {
+        id: 'j2',
+        title: "HFLSM: A Hybrid Flattened LSM-tree for Write-Efficient Key-Value Stores",
+        authors: ["Kun-Chi Chiang", "Chih-Yi Lyu", "Liang-Chi Chen", "Yu-Ming Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
+        venue: "IEEE Embedded Systems Letters (ESL)",
+        year: "2026",
+        type: PaperType.JOURNAL,
+        tags: ["Integrated with CODES+ISSS 2026"],
+        note: "To appear",
+        links: {}
+    },
+    {
+        id: 'j3',
+        title: "GraphISC: Enabling Out-of-Core Graph Processing with Distributed Computational Storage",
+        authors: ["Ssu-Hao Tsai", "Wen Sheng Lim", "Liang-Chi Chen", "Tei-Wei Kuo", "Yuan-Hao Chang"],
+        venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)",
+        year: "2026",
+        type: PaperType.JOURNAL,
+        tags: ["Integrated with CASES 2026"],
+        note: "To appear",
+        links: {}
+    },
+    {
+        id: 'j4',
         title: "Accelerating RNA-seq Quantification on a Real Processing-in-Memory System",
         authors: ["Liang-Chi Chen", "Chien-Chung Ho", "Yuan-Hao Chang"],
         venue: "IEEE Transactions on Computers (TC)",
@@ -176,7 +213,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'j2',
+        id: 'j5',
         title: "A Survey on Flash-Memory Storage Systems: A Host-Side Perspective",
         authors: ["Jalil Boukhobza", "Pierre Oliver", "Wen Sheng Lim", "Liang-Chi Chen", "Yun-Shan Hsieh", "Shin-Ting Wu", "Chien-Chung Ho", "Po-Chun Huang", "Yuan-Hao Chang"],
         venue: "ACM Transactions on Storage (TOS)",
@@ -187,7 +224,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'j3',
+        id: 'j6',
         title: "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories",
         authors: ["Shin-Ting Wu", "Liang-Chi Chen", "Po-Chun Huang", "Yuan-Hao Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
         venue: "ACM Transactions on Embedded Computing Systems (TECS)",
@@ -198,7 +235,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'j4',
+        id: 'j7',
         title: "Reaping Both Latency and Reliability Benefits With Elaborate Sanitization Design for 3D TLC NAND Flash",
         authors: ["Wei-Chen Wang", "Chien-Chung Ho", "Yung-Chun Li", "Liang-Chi Chen", "Yu-Ming Chang"],
         venue: "IEEE Transactions on Computers (TC)",
@@ -209,7 +246,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'j5',
+        id: 'j8',
         title: "LongPhase: an ultra-fast chromosome-scale phasing algorithm for small and large variants",
         authors: ["Jyun-Hong Lin", "Liang-Chi Chen", "Shu-Chi Yu", "Yao-Ting Huang"],
         venue: "Bioinformatics",
@@ -223,25 +260,47 @@ export const PAPERS: Paper[] = [
     // --- Conference Papers ---
     {
         id: 'c1',
+        title: "GraphISC: Enabling Out-of-Core Graph Processing with Distributed Computational Storage",
+        authors: ["Ssu-Hao Tsai", "Wen Sheng Lim", "Liang-Chi Chen", "Tei-Wei Kuo", "Yuan-Hao Chang"],
+        venue: "ACM/IEEE International Conference on Compilers, Architecture, and Synthesis for Embedded Systems (CASES)",
+        year: "2026",
+        type: PaperType.CONFERENCE,
+        tags: ["Top Conf.", "ESWEEK", "Journal Track"],
+        links: {}
+    },
+    {
+        id: 'c2',
+        title: "HFLSM: A Hybrid Flattened LSM-tree for Write-Efficient Key-Value Stores",
+        authors: ["Kun-Chi Chiang", "Chih-Yi Lyu", "Liang-Chi Chen", "Yu-Ming Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
+        venue: "ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS)",
+        year: "2026",
+        type: PaperType.CONFERENCE,
+        tags: ["ESWEEK", "Late Breaking Result"],
+        links: {}
+    },
+    {
+        id: 'c3',
         title: "LAMP: An Adaptive Near-Memory Processing System for High-Performance Long-Read Mapping",
         authors: ["Jo-Ling Huang", "Liang-Chi Chen", "Chien-Chung Ho", "Yuan-Hao Chang"],
         venue: "Design, Automation and Test in Europe (DATE)",
         year: "2026",
         type: PaperType.CONFERENCE,
         tags: ["Top Conf.", "Acceptance rate: 24.8%"],
-        links: {} // 尚未提供連結
+        links: {} // proceedings link not yet available
     },
     {
-        id: 'c2',
+        id: 'c4',
         title: "Accelerating RNA-Seq Pseudoalignment via NAND Flash-based In-Memory-Searching Architecture",
         authors: ["Guan-De Jiang", "Ying-Sheng Huang", "Liang-Chi Chen", "Chien-Chung Ho"],
         venue: "ACM/SIGAPP Symposium On Applied Computing (SAC)",
         year: "2026",
         type: PaperType.CONFERENCE,
-        links: {} // 尚未提供連結
+        links: {
+            pdf: "https://doi.org/10.1145/3748522.3779728"
+        }
     },
     {
-        id: 'c3',
+        id: 'c5',
         title: "AridWalk: Efficient Graph Random Walks on a Resource-Limited Computational Storage Device",
         authors: ["Liang-Chi Chen", "Chien-Chung Ho", "Tei-Wei Kuo", "Yuan-Hao Chang"],
         venue: "ACM/IEEE International Symposium on Low Power Electronics and Design (ISLPED)",
@@ -254,7 +313,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'c4',
+        id: 'c6',
         title: "PIMDup: An Optimized Deduplication Design on a Real Processing-in-Memory System",
         authors: ["Chun-Le Yeh", "Liang-Chi Chen", "Chien-Chung Ho", "Yu-Ming Chang", "Da-Wei Chang"],
         venue: "ACM/IEEE Design Automation Conference (DAC)",
@@ -268,7 +327,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'c5',
+        id: 'c7',
         title: "LifeSqueezer: Increase the Tolerability of Weak Pages for Lifetime Improvement on TLC-based SSDs",
         authors: ["Liang-Chi Chen", "Kun-Chi Chiang", "Chien-Chung Ho", "Yu-Ming Chang", "Chin-Chiang Pan", "Yuan-Hao Chang"],
         venue: "ACM International Conference on Research in Adaptive and Convergent Systems (RACS)",
@@ -280,7 +339,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'c6',
+        id: 'c8',
         title: "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories",
         authors: ["Shin-Ting Wu", "Liang-Chi Chen", "Po-Chun Huang", "Yuan-Hao Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
         venue: "ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS)",
@@ -292,7 +351,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'c7',
+        id: 'c9',
         title: "UpPipe: A Novel Pipeline Management on In-Memory Processors for RNA-seq Quantification",
         authors: ["Liang-Chi Chen", "Chien-Chung Ho", "Yuan-Hao Chang"],
         venue: "ACM/IEEE Design Automation Conference (DAC)",
@@ -307,7 +366,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'c8',
+        id: 'c10',
         title: "Efficient Sanitization Design for LSM-based Key-Value Store over 3D MLC NAND Flash",
         authors: ["Liang-Chi Chen", "Shu-Qi Yu", "Chien-Chung Ho", "Wei-Chen Wang", "Yung-Chun Li"],
         venue: "ACM/SIGAPP Symposium on Applied Computing (SAC)",
@@ -320,7 +379,7 @@ export const PAPERS: Paper[] = [
         }
     },
     {
-        id: 'c9',
+        id: 'c11',
         title: "RNA-seq Quantification on Processing in memory Architecture: Observation and Characterization",
         authors: ["Liang-Chi Chen", "Shu-Qi Yu", "Chien-Chung Ho", "Yuan-Hao Chang", "Da-Wei Chang", "Wei-Chen Wang", "Yu-Ming Chang"],
         venue: "IEEE Non-Volatile Memory Systems and Applications Symposium (NVMSA)",
@@ -337,7 +396,7 @@ export const PAPERS: Paper[] = [
     {
         id: 'p1',
         title: "PIM or CXL-PIM? Understanding Architectural Trade-offs Through Large-Scale Benchmarking",
-        authors: ["I-Ting Lee", "Bao-Kai Wang", "Liang-Chi Chen", "Wen Sheng Lim", "Da-Wei Chang", "Yu-Ming Chang", "Chieng-Chung Ho"],
+        authors: ["I-Ting Lee", "Bao-Kai Wang", "Liang-Chi Chen", "Wen Sheng Lim", "Da-Wei Chang", "Yu-Ming Chang", "Chien-Chung Ho"],
         venue: "arXiv preprint",
         year: "2025",
         type: PaperType.PREPRINT,
