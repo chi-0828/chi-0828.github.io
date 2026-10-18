@@ -193,7 +193,7 @@ export const PAPERS: Paper[] = [
         id: 'j3',
         title: "GraphISC: Enabling Out-of-Core Graph Processing with Distributed Computational Storage",
         authors: ["Ssu-Hao Tsai", "Wen Sheng Lim", "Liang-Chi Chen", "Tei-Wei Kuo", "Yuan-Hao Chang"],
-        venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Integrated with CODES+ISSS 2026",
+        venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Integrated with CASES 2026",
         year: "",
         type: PaperType.JOURNAL,
         note: "To appear",
