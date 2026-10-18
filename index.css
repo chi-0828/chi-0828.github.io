@@ -8,6 +8,12 @@
   body {
     background-color: #fbfaf7;
   }
+
+  ::-webkit-scrollbar { width: 9px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #e2e0d8; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: #d2cfc4; }
+  ::selection { background: rgba(58, 90, 156, 0.16); }
 }
 
 @layer utilities {

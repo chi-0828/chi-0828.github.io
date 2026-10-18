@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Quote, Code, MonitorPlay, Link2, FileImage, Trophy } from 'lucide-react';
+import { FileText, Code, MonitorPlay, Link2, FileImage, Trophy } from 'lucide-react';
 import { PAPERS, PROFILE } from '../constants';
 import { PaperType, Paper } from '../types';
 
@@ -89,7 +89,6 @@ const PaperCard: React.FC<{ paper: Paper; index: number }> = ({ paper, index }) 
 
         <div className="mt-3 flex flex-wrap gap-2 ml-7">
             {paper.links.pdf && <ActionButton icon={<FileText size={16} />} label="PDF" href={paper.links.pdf} />}
-            {paper.links.bibtex && <ActionButton icon={<Quote size={16} />} label="BibTeX" onClick={() => alert('BibTeX copied to clipboard (Simulated)')} />}
             {paper.links.code && <ActionButton icon={<Code size={16} />} label="Code" href={paper.links.code} />}
             {paper.links.slides && <ActionButton icon={<MonitorPlay size={16} />} label="Slides" href={paper.links.slides} />}
             {paper.links.arxiv && <ActionButton icon={<Link2 size={16} />} label="arXiv" href={paper.links.arxiv} />}
@@ -98,10 +97,13 @@ const PaperCard: React.FC<{ paper: Paper; index: number }> = ({ paper, index }) 
     </article>
 );
 
-const ActionButton: React.FC<{ icon: React.ReactNode; label: string; href?: string; onClick?: () => void }> = ({ icon, label, href, onClick }) => {
-    const className = "flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted bg-paper rounded-lg border border-line hover:bg-accent-soft hover:text-accent hover:border-accent/30 transition-colors";
-    if (href) {
-        return <a href={href} target="_blank" rel="noreferrer" className={className}>{icon} {label}</a>;
-    }
-    return <button onClick={onClick} className={className}>{icon} {label}</button>;
-};
+const ActionButton: React.FC<{ icon: React.ReactNode; label: string; href: string }> = ({ icon, label, href }) => (
+    <a
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted bg-paper rounded-lg border border-line hover:bg-accent-soft hover:text-accent hover:border-accent/30 transition-colors"
+    >
+        {icon} {label}
+    </a>
+);

@@ -24,7 +24,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     </main>
     <footer className="border-t border-line">
       <div className="max-w-4xl mx-auto px-6 py-8">
-        <p className="text-xs text-faint">© 2026 {PROFILE.name}</p>
+        <p className="text-xs text-faint">© {new Date().getFullYear()} {PROFILE.name}</p>
       </div>
     </footer>
   </div>
