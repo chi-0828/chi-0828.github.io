@@ -184,7 +184,7 @@ export const PAPERS: Paper[] = [
         title: "HFLSM: A Hybrid Flattened LSM-tree for Write-Efficient Key-Value Stores",
         authors: ["Kun-Chi Chiang", "Chih-Yi Lyu", "Liang-Chi Chen", "Yu-Ming Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
         venue: "IEEE Embedded Systems Letters (ESL), Integrated with CODES+ISSS 2026",
-        year: "2026",
+        year: "",
         type: PaperType.JOURNAL,
         note: "To appear",
         links: {}
@@ -194,7 +194,7 @@ export const PAPERS: Paper[] = [
         title: "GraphISC: Enabling Out-of-Core Graph Processing with Distributed Computational Storage",
         authors: ["Ssu-Hao Tsai", "Wen Sheng Lim", "Liang-Chi Chen", "Tei-Wei Kuo", "Yuan-Hao Chang"],
         venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Integrated with CODES+ISSS 2026",
-        year: "2026",
+        year: "",
         type: PaperType.JOURNAL,
         note: "To appear",
         links: {}
