@@ -229,7 +229,11 @@ export const PAPERS: Paper[] = [
         year: "2026",
         type: PaperType.CONFERENCE,
         tags: ["Top Conf.", "Acceptance rate: 24.8%"],
-        links: {} // 尚未提供連結
+        links: {
+            pdf: "https://ieeexplore.ieee.org/abstract/document/11539580",
+            slides: "https://drive.google.com/file/d/1HlwKhfcKTwX7-7xESkC2Vsj2gXJfvR8c/view?usp=drive_link",
+            poster: "https://drive.google.com/file/d/1_-tJAuOUfRshf94N6iteibGWzEMT07i0/view?usp=sharing"
+        }
     },
     {
         id: 'c2',
@@ -283,10 +287,10 @@ export const PAPERS: Paper[] = [
         id: 'c6',
         title: "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories",
         authors: ["Shin-Ting Wu", "Liang-Chi Chen", "Po-Chun Huang", "Yuan-Hao Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
-        venue: "ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS)",
+        venue: "ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS), Journal Track",
         year: "2023",
         type: PaperType.CONFERENCE,
-        tags: ["ESWEEK", "Journal Track"],
+        tags: ["ESWEEK"],
         links: {
             pdf: "https://doi.org/10.1145/3608033"
         }
@@ -331,6 +335,24 @@ export const PAPERS: Paper[] = [
             slides: "https://drive.google.com/file/d/1BBApsF9JVOiIAwc3cDyd31qJUWnrnZls/view?usp=drive_link",
             code: "https://github.com/chi-0828/RNA-Abundance-Quantification-on-UPMEM"
         }
+    },
+    {
+        id: 'c10',
+        title: "GraphISC: Enabling Out-of-Core Graph Processing with Distributed Computational Storage",
+        authors: [],
+        venue: "CASES, Journal Track",
+        year: "",
+        type: PaperType.CONFERENCE,
+        links: {} // 尚未提供連結
+    },
+    {
+        id: 'c11',
+        title: "HFLSM",
+        authors: [],
+        venue: "Late Breaking Result",
+        year: "",
+        type: PaperType.CONFERENCE,
+        links: {} // 尚未提供連結
     },
 
     // --- Preprints ---
