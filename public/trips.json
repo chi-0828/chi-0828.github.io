@@ -41,5 +41,11 @@
   { "id": "2026-04-16-BR95", "fromName": "Taipei", "fromLat": 25.03, "fromLng": 121.56, "toName": "Milan", "toLat": 45.46, "toLng": 9.19, "label": "BR95 · business", "date": "2026-04-16" },
   { "id": "2026-04-24-EN544", "fromName": "Venice", "fromLat": 45.44, "fromLng": 12.32, "toName": "Vienna", "toLat": 48.21, "toLng": 16.37, "label": "EN544 · business", "date": "2026-04-24" },
   { "id": "2026-04-30-OS523", "fromName": "Vienna", "fromLat": 48.21, "fromLng": 16.37, "toName": "Milan", "toLat": 45.46, "toLng": 9.19, "label": "OS523 · business", "date": "2026-04-30" },
-  { "id": "2026-05-01-BR96", "fromName": "Milan", "fromLat": 45.46, "fromLng": 9.19, "toName": "Taipei", "toLat": 25.03, "toLng": 121.56, "label": "BR96 · business", "date": "2026-05-01" }
+  { "id": "2026-05-01-BR96", "fromName": "Milan", "fromLat": 45.46, "fromLng": 9.19, "toName": "Taipei", "toLat": 25.03, "toLng": 121.56, "label": "BR96 · business", "date": "2026-05-01" },
+  { "id": "2026-10-02-TPE-DXB", "fromName": "Taipei", "fromLat": 25.03, "fromLng": 121.56, "toName": "Dubai", "toLat": 25.20, "toLng": 55.27, "label": "TPE-DXB", "date": "2026-10-02" },
+  { "id": "2026-10-02-DXB-BCN", "fromName": "Dubai", "fromLat": 25.20, "fromLng": 55.27, "toName": "Barcelona", "toLat": 41.39, "toLng": 2.17, "label": "DXB-BCN", "date": "2026-10-02" },
+  { "id": "2026-10-09-BCN-SVQ", "fromName": "Barcelona", "fromLat": 41.39, "fromLng": 2.17, "toName": "Seville", "toLat": 37.39, "toLng": -5.98, "label": "BCN-SVQ", "date": "2026-10-09" },
+  { "id": "2026-10-12-SVQ-BCN", "fromName": "Seville", "fromLat": 37.39, "fromLng": -5.98, "toName": "Barcelona", "toLat": 41.39, "toLng": 2.17, "label": "SVQ-BCN", "date": "2026-10-12" },
+  { "id": "2026-10-13-BCN-DXB", "fromName": "Barcelona", "fromLat": 41.39, "fromLng": 2.17, "toName": "Dubai", "toLat": 25.20, "toLng": 55.27, "label": "BCN-DXB", "date": "2026-10-13" },
+  { "id": "2026-10-14-DXB-TPE", "fromName": "Dubai", "fromLat": 25.20, "fromLng": 55.27, "toName": "Taipei", "toLat": 25.03, "toLng": 121.56, "label": "DXB-TPE", "date": "2026-10-14" }
 ]
