@@ -117,6 +117,13 @@ export const AWARDS: AwardItem[] = [
         issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
     },
     {
+        id: 10,
+        title: 'Outstanding Teaching Assistant Award',
+        description: 'Teaching Assistant, Memory and Storage Systems · Fall 2025',
+        year: '2025',
+        issuer: 'Dept. of Computer Science and Information Engineering, National Taiwan University',
+    },
+    {
         id: 3,
         title: 'Google Conference Scholarship',
         description: 'APAC Student Travel Grant for ISLPED',
@@ -177,7 +184,9 @@ export const PAPERS: Paper[] = [
         year: "2026",
         type: PaperType.JOURNAL,
         note: "To appear",
-        links: {}
+        links: {
+            pdf: "https://ieeexplore.ieee.org/abstract/document/11735224"
+        }
     },
     {
         id: 'j2',
@@ -187,7 +196,9 @@ export const PAPERS: Paper[] = [
         year: "",
         type: PaperType.JOURNAL,
         note: "To appear",
-        links: {}
+        links: {
+            pdf: "https://ieeexplore.ieee.org/abstract/document/11741118"
+        }
     },
     {
         id: 'j3',
