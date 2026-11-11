@@ -183,7 +183,6 @@ export const PAPERS: Paper[] = [
         venue: "IEEE Transactions on Computers (TC)",
         year: "2026",
         type: PaperType.JOURNAL,
-        note: "To appear",
         links: {
             pdf: "https://ieeexplore.ieee.org/abstract/document/11735224"
         }
@@ -195,7 +194,6 @@ export const PAPERS: Paper[] = [
         venue: "IEEE Embedded Systems Letters (ESL), Integrated with CODES+ISSS 2026",
         year: "",
         type: PaperType.JOURNAL,
-        note: "To appear",
         links: {
             pdf: "https://ieeexplore.ieee.org/abstract/document/11741118"
         }
@@ -268,26 +266,6 @@ export const PAPERS: Paper[] = [
 
     // --- Conference Papers ---
     {
-        id: 'c1',
-        title: "GraphISC: Enabling Out-of-Core Graph Processing with Distributed Computational Storage",
-        authors: ["Ssu-Hao Tsai", "Wen Sheng Lim", "Liang-Chi Chen", "Tei-Wei Kuo", "Yuan-Hao Chang"],
-        venue: "ACM/IEEE International Conference on Compilers, Architecture, and Synthesis for Embedded Systems (CASES), Journal Track",
-        year: "2026",
-        type: PaperType.CONFERENCE,
-        tags: ["ESWEEK"],
-        links: {}
-    },
-    {
-        id: 'c2',
-        title: "HFLSM: A Hybrid Flattened LSM-tree for Write-Efficient Key-Value Stores",
-        authors: ["Kun-Chi Chiang", "Chih-Yi Lyu", "Liang-Chi Chen", "Yu-Ming Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
-        venue: "ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS), Late Breaking Result",
-        year: "2026",
-        type: PaperType.CONFERENCE,
-        tags: ["ESWEEK"],
-        links: {}
-    },
-    {
         id: 'c3',
         title: "LAMP: An Adaptive Near-Memory Processing System for High-Performance Long-Read Mapping",
         authors: ["Jo-Ling Huang", "Liang-Chi Chen", "Chien-Chung Ho", "Yuan-Hao Chang"],
@@ -349,18 +327,6 @@ export const PAPERS: Paper[] = [
         links: {
             pdf: "https://dl.acm.org/doi/abs/10.1145/3649601.3698723",
             slides: "https://drive.google.com/file/d/1_0BeCuYjl1HhHdIRkAOeLEKhQp7Ln9ek/view?usp=sharing"
-        }
-    },
-    {
-        id: 'c8',
-        title: "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories",
-        authors: ["Shin-Ting Wu", "Liang-Chi Chen", "Po-Chun Huang", "Yuan-Hao Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
-        venue: "ACM/IEEE International Conference on Hardware/Software Codesign and System Synthesis (CODES+ISSS), Journal Track",
-        year: "2023",
-        type: PaperType.CONFERENCE,
-        tags: ["ESWEEK"],
-        links: {
-            pdf: "https://doi.org/10.1145/3608033"
         }
     },
     {
