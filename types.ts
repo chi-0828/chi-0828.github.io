@@ -57,4 +57,6 @@ export interface AwardItem {
     year: string;
     issuer: string;
     featured?: boolean; // flagship honors are emphasised in the list
+    page?: string; // internal route; the title links here when set
+    links?: { label: string; href: string }[]; // external references shown under the description
 }

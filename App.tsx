@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { TopBar } from './components/TopBar';
 import { Home } from './pages/Home';
 import { Publications } from './pages/Publications';
+import { Fellowship } from './pages/Fellowship';
 import { PROFILE } from './constants';
 
 // Travel pulls in three.js — load it only when the route is visited.
@@ -37,6 +38,7 @@ const App: React.FC = () => (
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/publications" element={<Publications />} />
+        <Route path="/fellowship" element={<Fellowship />} />
         <Route
           path="/travel"
           element={

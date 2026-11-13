@@ -15,6 +15,17 @@ export const PROFILE = {
     },
 };
 
+// Official references for the 2026 Google PhD Fellowship (announced 2026-11-12).
+export const FELLOWSHIP = {
+    year: "2026",
+    area: "Silicon Research (Algorithms, Architecture, Open Source Tooling)",
+    region: "East Asia",
+    cardImage: "/img/google-phd-fellow-2026.webp",
+    blog: "https://blog.google/company-news/outreach-and-initiatives/google-org/phd-fellows-2026/",
+    recipients: "https://research.google/programs-and-events/phd-fellowship/recipients/",
+    cohort: { fellows: 148, countries: 38, funding: "$13M" },
+};
+
 export const EDUCATION: EducationItem[] = [
     {
         id: '1',
@@ -76,7 +87,14 @@ export const NEWS: NewsItem[] = [
     {
         id: '2',
         date: "2026-09",
-        content: <span>Honored to receive the <strong className="text-red-700">2026 Google PhD Fellowship</strong> in Silicon Research (East Asia)</span>
+        content: (
+            <span>
+                Honored to receive the <strong className="text-red-700">2026 Google PhD Fellowship</strong> in Silicon Research (East Asia).{' '}
+                <a href={FELLOWSHIP.blog} target="_blank" rel="noreferrer" className="text-accent hover:underline underline-offset-4 whitespace-nowrap">
+                    Official announcement ↗
+                </a>
+            </span>
+        )
     },
     {
         id: '3',
@@ -108,6 +126,11 @@ export const AWARDS: AwardItem[] = [
         year: '2026',
         issuer: 'Google',
         featured: true,
+        page: '/fellowship',
+        links: [
+            { label: 'Google blog', href: FELLOWSHIP.blog },
+            { label: 'Recipient list', href: FELLOWSHIP.recipients },
+        ],
     },
     {
         id: 2,

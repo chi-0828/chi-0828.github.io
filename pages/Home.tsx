@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Github, GraduationCap, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Mail, Github, GraduationCap, Linkedin, ArrowUpRight } from 'lucide-react';
 import { EDUCATION, EXPERIENCE, NEWS, AWARDS, PROFILE } from '../constants';
 
 const contacts = [
@@ -131,11 +132,31 @@ export const Home: React.FC = () => {
                             <div className="min-w-0">
                                 {/* Flagship honors stay in the same row rhythm — only weight and color change. */}
                                 <p className={award.featured ? 'text-[14.5px] font-bold text-accent leading-snug' : 'text-[14.5px] text-ink leading-snug'}>
-                                    {award.title}
+                                    {award.page ? (
+                                        <Link to={award.page} className="hover:underline underline-offset-4">
+                                            {award.title}
+                                            <ArrowUpRight size={14} strokeWidth={2.25} className="inline-block ml-0.5 -mt-0.5" />
+                                        </Link>
+                                    ) : award.title}
                                 </p>
                                 {award.description && (
                                     <p className={award.featured ? 'text-[13px] text-accent/80 italic' : 'text-[13px] text-muted italic'}>
                                         {award.description}
+                                    </p>
+                                )}
+                                {award.links && (
+                                    <p className="flex flex-wrap gap-x-3 mt-1">
+                                        {award.links.map((l) => (
+                                            <a
+                                                key={l.href}
+                                                href={l.href}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="text-[12.5px] text-accent/90 hover:text-accent hover:underline underline-offset-4"
+                                            >
+                                                {l.label} ↗
+                                            </a>
+                                        ))}
                                     </p>
                                 )}
                             </div>
