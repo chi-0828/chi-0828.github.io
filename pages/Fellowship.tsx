@@ -8,11 +8,6 @@ import { FELLOWSHIP, PROFILE } from '../constants';
 // funding and point to the official blog post and recipients directory.
 export const Fellowship: React.FC = () => {
     const { cohort } = FELLOWSHIP;
-    const stats = [
-        { value: String(cohort.fellows), label: 'new Fellows' },
-        { value: String(cohort.countries), label: 'countries' },
-        { value: cohort.funding, label: 'cohort funding' },
-    ];
 
     return (
         <div className="animate-rise">
@@ -51,25 +46,13 @@ export const Fellowship: React.FC = () => {
                             energy-efficient.
                         </p>
                         <p>
-                            I&apos;m one of {cohort.fellows} new Fellows across {cohort.countries} countries this year. Thank you to my
-                            advisors and lab for their support, and I&apos;m excited to connect with the rest of the Fellows.
+                            I&apos;m one of {cohort.fellows} new Fellows across {cohort.countries} countries this year, a cohort
+                            supported by {cohort.funding} in total funding from Google and Google.org. Thank you to my advisors,
+                            Prof. Tei-Wei Kuo and Prof. Yuan-Hao Chang, and to Prof. Chien-Chung Ho for their support. I&apos;m
+                            excited to connect with the rest of the Fellows.
                         </p>
                     </div>
 
-                    <dl className="grid grid-cols-3 gap-3 mt-7">
-                        {stats.map((s) => (
-                            <div key={s.label} className="rounded-xl border border-line bg-surface px-3 py-3 text-center">
-                                <dt className="sr-only">{s.label}</dt>
-                                <dd>
-                                    <span className="block font-arial text-2xl font-bold text-accent">{s.value}</span>
-                                    <span className="block text-[12px] text-muted mt-0.5">{s.label}</span>
-                                </dd>
-                            </div>
-                        ))}
-                    </dl>
-                    <p className="text-[12px] text-faint mt-2">
-                        The {FELLOWSHIP.year} cohort is supported by {cohort.funding} in total funding from Google and Google.org.
-                    </p>
 
                     <div className="flex flex-wrap gap-2 mt-7">
                         <a href={FELLOWSHIP.blog} target="_blank" rel="noreferrer" className={btn}>
