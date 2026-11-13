@@ -47,8 +47,10 @@ export const Fellowship: React.FC = () => {
                         </p>
                         <p>
                             I&apos;m one of {cohort.fellows} new Fellows across {cohort.countries} countries this year, a cohort
-                            supported by {cohort.funding} in total funding from Google and Google.org. Thank you to my advisors,
-                            Prof. Tei-Wei Kuo and Prof. Yuan-Hao Chang, and to Prof. Chien-Chung Ho for their support. I&apos;m
+                            supported by {cohort.funding} in total funding from Google and Google.org. Thank you to my advisors,{' '}
+                            <strong className="text-ink">Prof. Tei-Wei Kuo</strong> and{' '}
+                            <strong className="text-ink">Prof. Yuan-Hao Chang</strong>, and to{' '}
+                            <strong className="text-ink">Prof. Chien-Chung Ho</strong> for their support. I&apos;m
                             excited to connect with the rest of the Fellows.
                         </p>
                     </div>
