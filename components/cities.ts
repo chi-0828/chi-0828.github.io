@@ -9,6 +9,7 @@ export const CITY_DB: CityRec[] = [
     { name: 'Tokyo', country: 'JP', lat: 35.68, lng: 139.69 },
     { name: 'Osaka', country: 'JP', lat: 34.69, lng: 135.50 },
     { name: 'Kyoto', country: 'JP', lat: 35.01, lng: 135.77 },
+    { name: 'Fukuoka', country: 'JP', lat: 33.59, lng: 130.40 },
     { name: 'Seoul', country: 'KR', lat: 37.57, lng: 126.98 },
     { name: 'Busan', country: 'KR', lat: 35.18, lng: 129.08 },
     { name: 'Hong Kong', country: 'HK', lat: 22.32, lng: 114.17 },
