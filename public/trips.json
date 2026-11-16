@@ -48,6 +48,6 @@
   { "id": "2026-10-12-SVQ-BCN", "fromName": "Seville", "fromLat": 37.39, "fromLng": -5.98, "toName": "Barcelona", "toLat": 41.39, "toLng": 2.17, "label": "SVQ-BCN", "date": "2026-10-12" },
   { "id": "2026-10-13-BCN-DXB", "fromName": "Barcelona", "fromLat": 41.39, "fromLng": 2.17, "toName": "Dubai", "toLat": 25.20, "toLng": 55.27, "label": "BCN-DXB", "date": "2026-10-13" },
   { "id": "2026-10-14-DXB-TPE", "fromName": "Dubai", "fromLat": 25.20, "fromLng": 55.27, "toName": "Taipei", "toLat": 25.03, "toLng": 121.56, "label": "DXB-TPE", "date": "2026-10-14" },
-  { "id": "2026-11-13-BR104", "fromName": "Taipei", "fromLat": 25.03, "fromLng": 121.56, "toName": "Fukuoka", "toLat": 33.59, "toLng": 130.40, "label": "BR104", "date": "2026-11-13" },
-  { "id": "2026-11-22-BR101", "fromName": "Fukuoka", "fromLat": 33.59, "fromLng": 130.40, "toName": "Taipei", "toLat": 25.03, "toLng": 121.56, "label": "BR101", "date": "2026-11-22" }
+  { "id": "2026-11-13-BR104", "fromName": "Taipei", "fromLat": 25.03, "fromLng": 121.56, "toName": "Fukuoka", "toLat": 33.59, "toLng": 130.40, "label": "BR104 · business", "date": "2026-11-13" },
+  { "id": "2026-11-22-BR101", "fromName": "Fukuoka", "fromLat": 33.59, "fromLng": 130.40, "toName": "Taipei", "toLat": 25.03, "toLng": 121.56, "label": "BR101 · business", "date": "2026-11-22" }
 ]
