@@ -1,18 +1,30 @@
 import React from 'react';
 import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem } from './types';
 
+// A highlighted person's name in prose that links to their Google Scholar profile.
+const ScholarName: React.FC<{ name: string; user: string }> = ({ name, user }) => (
+    <a
+        href={`https://scholar.google.com/citations?user=${user}`}
+        target="_blank"
+        rel="noreferrer"
+        className="font-semibold text-ink underline decoration-line decoration-2 underline-offset-4 hover:text-accent hover:decoration-accent transition-colors"
+    >
+        {name}
+    </a>
+);
+
 export const PROFILE = {
     name: "Liang-Chi Chen",
     role: "Ph.D. Candidate · National Taiwan University",
     bio: (
         <>
             I am currently a PhD Candidate at National Taiwan University, advised by{' '}
-            <strong className="text-ink">Prof. Tei-Wei Kuo</strong> and{' '}
-            <strong className="text-ink">Prof. Yuan-Hao Chang</strong>, specializing in Embedded Systems and
+            <ScholarName name="Prof. Tei-Wei Kuo" user="gBuHlIQAAAAJ" /> and{' '}
+            <ScholarName name="Prof. Yuan-Hao Chang" user="AhcrCPUAAAAJ" />, specializing in Embedded Systems and
             Memory/Storage Systems/Devices. My PhD research focuses on Processing-in-Memory (PIM) and In-Storage
             Computing accelerators. I also work on optimizations for NAND flash, emerging NVM (e.g., ReRAM or
             persistent memory), and CXL systems. I received my M.S. from National Cheng Kung University under{' '}
-            <strong className="text-ink">Prof. Chien-Chung Ho</strong>, with whom I continue to collaborate closely.
+            <ScholarName name="Prof. Chien-Chung Ho" user="ESi9A4EAAAAJ" />, with whom I continue to collaborate closely.
         </>
     ),
     avatarUrl: "/img/avatar.webp",
