@@ -4,7 +4,17 @@ import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem } 
 export const PROFILE = {
     name: "Liang-Chi Chen",
     role: "Ph.D. Candidate · National Taiwan University",
-    bio: "I am currently a PhD Candidate at National Taiwan University, specializing in Embedded Systems and Memory/Storage Systems/Devices. My PhD research focuses on Processing-in-Memory (PIM) and In-Storage Computing accelerators. I also work on optimizations for NAND flash, emerging NVM (e.g., ReRAM or persistent memory), and CXL systems.",
+    bio: (
+        <>
+            I am currently a PhD Candidate at National Taiwan University, advised by{' '}
+            <strong className="text-ink">Prof. Tei-Wei Kuo</strong> and{' '}
+            <strong className="text-ink">Prof. Yuan-Hao Chang</strong>, specializing in Embedded Systems and
+            Memory/Storage Systems/Devices. My PhD research focuses on Processing-in-Memory (PIM) and In-Storage
+            Computing accelerators. I also work on optimizations for NAND flash, emerging NVM (e.g., ReRAM or
+            persistent memory), and CXL systems. I received my M.S. from National Cheng Kung University under{' '}
+            <strong className="text-ink">Prof. Chien-Chung Ho</strong>, with whom I continue to collaborate closely.
+        </>
+    ),
     avatarUrl: "/img/avatar.webp",
     email: "d12922012@csie.ntu.edu.tw",
     cvLink: "https://drive.google.com/file/d/1HLpfbAtE2ratXp0CD2LWCkjgkydYV4ii/view?usp=sharing",
