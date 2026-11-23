@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem } from './types';
+import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem, PubTopic } from './types';
 
 // A highlighted person's name in prose that links to their Google Scholar profile.
 const ScholarName: React.FC<{ name: string; user: string }> = ({ name, user }) => (
@@ -428,4 +428,30 @@ export const PAPERS: Paper[] = [
             pdf: "https://arxiv.org/pdf/2511.14400"
         }
     }
+];
+
+// Curated selection shown on the Publications page. Papers not listed here stay in PAPERS
+// (and remain reachable through the Google Scholar profile).
+export const PUB_TOPICS: PubTopic[] = [
+    {
+        key: 'pim',
+        title: 'Processing-in-Memory (PIM)',
+        description: 'PIM architectures and accelerators for data-intensive workloads',
+        conference: ['c3', 'c6', 'c9'],   // DATE'26, DAC'25, DAC'23
+        journal: ['j1', 'j4'],            // TC'26, TC'25
+    },
+    {
+        key: 'in-storage',
+        title: 'In-Storage Computing',
+        description: 'Computation offloaded into computational storage devices',
+        conference: ['c5'],               // ISLPED'25
+        journal: ['j3'],                  // TCAD (CASES'26)
+    },
+    {
+        key: 'storage-nvm',
+        title: 'Storage & NVM Systems',
+        description: 'Flash, emerging non-volatile memory, and key-value storage',
+        conference: [],
+        journal: ['j2', 'j5', 'j6', 'j7'], // ESL (CODES+ISSS'26), TOS'25, TECS (CODES+ISSS'23), TC'23
+    },
 ];

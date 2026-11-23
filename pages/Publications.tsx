@@ -1,109 +1,106 @@
 import React from 'react';
-import { FileText, Code, MonitorPlay, Link2, FileImage, Trophy } from 'lucide-react';
-import { PAPERS, PROFILE } from '../constants';
-import { PaperType, Paper } from '../types';
+import { ExternalLink, Trophy } from 'lucide-react';
+import { PAPERS, PROFILE, PUB_TOPICS } from '../constants';
+import { Paper, PubTopic } from '../types';
 
-export const Publications: React.FC = () => {
-    const journalPapers = PAPERS.filter((p) => p.type === PaperType.JOURNAL);
-    const confPapers = PAPERS.filter((p) => p.type === PaperType.CONFERENCE);
-    const preprints = PAPERS.filter((p) => p.type === PaperType.PREPRINT);
+const resolve = (ids: string[]): Paper[] =>
+    ids.map((id) => PAPERS.find((p) => p.id === id)).filter((p): p is Paper => Boolean(p));
 
+export const Publications: React.FC = () => (
+    <div className="animate-rise">
+        <h1 className="font-arial text-3xl font-bold tracking-tight text-ink mb-1">Publications</h1>
+        <p className="text-sm text-muted mb-5">Selected papers, grouped by research topic.</p>
+
+        <a
+            href={PROFILE.links.scholar}
+            target="_blank"
+            rel="noreferrer"
+            className="group flex items-center justify-between gap-3 mb-8 px-4 py-2.5 rounded-xl border border-line bg-surface hover:bg-accent-soft hover:border-accent/30 transition-colors"
+        >
+            <span className="text-sm font-medium text-ink group-hover:text-accent">Full publication list on Google Scholar</span>
+            <ExternalLink size={15} className="text-muted group-hover:text-accent shrink-0" />
+        </a>
+
+        {PUB_TOPICS.map((topic) => (
+            <TopicSection key={topic.key} topic={topic} />
+        ))}
+    </div>
+);
+
+const TopicSection: React.FC<{ topic: PubTopic }> = ({ topic }) => {
+    const conference = resolve(topic.conference);
+    const journal = resolve(topic.journal);
     return (
-        <div className="animate-rise">
-            <div className="flex items-center gap-3 mb-1">
-                <h1 className="font-arial text-3xl font-bold tracking-tight text-ink">Publications</h1>
-            </div>
-            <p className="text-sm text-muted mb-10">{PAPERS.length} papers across journals, conferences, and preprints.</p>
-
-            <PaperSection title="Journals, IEEE/ACM Transactions" papers={journalPapers} />
-            <PaperSection title="Conference Papers" papers={confPapers} />
-            <PaperSection title="Preprints & Technical Reports" papers={preprints} color="bg-faint" />
-        </div>
-    );
-};
-
-const PaperSection: React.FC<{ title: string; papers: Paper[]; color?: string }> = ({ title, papers, color = 'bg-accent' }) => {
-    if (papers.length === 0) return null;
-    return (
-        <section className="mb-12">
-            <div className="flex items-center gap-2 mb-4">
-                <span className={`w-1.5 h-6 ${color} rounded-full`} />
-                <h2 className="font-arial text-xl font-bold text-ink uppercase tracking-wide flex items-center gap-2">
-                    {title}
-                    <span className="text-muted text-lg font-medium">({papers.length})</span>
+        <section className="mb-10">
+            <div className="mb-3">
+                <h2 className="font-arial text-lg font-bold text-ink flex items-center gap-2">
+                    <span className="w-1.5 h-5 bg-accent rounded-full" />
+                    {topic.title}
                 </h2>
+                <p className="text-xs text-muted ml-3.5">{topic.description}</p>
             </div>
 
-            <div className="bg-surface rounded-2xl shadow-soft border border-line overflow-hidden">
-                <div className="divide-y divide-line">
-                    {papers.map((paper, index) => (
-                        <PaperCard key={paper.id} paper={paper} index={index + 1} />
-                    ))}
-                </div>
-            </div>
+            {conference.length > 0 && <PaperGroup label="Conferences" papers={conference} />}
+            {journal.length > 0 && <PaperGroup label="Transactions & Journals" papers={journal} />}
         </section>
     );
 };
 
-const PaperCard: React.FC<{ paper: Paper; index: number }> = ({ paper, index }) => (
-    <article className="relative p-5 hover:bg-accent-soft/60 transition-colors duration-200 group">
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-accent transition-colors duration-200" />
-
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
-            <div className="flex-grow pr-4">
-                <h3 className="text-base font-bold text-ink leading-snug mb-1.5 group-hover:text-accent transition-colors flex items-start gap-2">
-                    <span className="text-muted font-mono text-sm mt-[2px] shrink-0">[{index}]</span>
-                    <span>{paper.title}</span>
-                </h3>
-
-                <p className="text-muted text-[13px] md:text-sm mb-2 leading-relaxed ml-7">
-                    {paper.authors.map((author, i) => (
-                        <span key={i}>
-                            {author === PROFILE.name ? (
-                                <strong className="text-ink font-bold">{author}</strong>
-                            ) : author}
-                            {i < paper.authors.length - 1 ? ', ' : '.'}
-                        </span>
-                    ))}
-                </p>
-
-                <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm ml-7">
-                    <span className="font-serif italic text-ink font-medium">{paper.venue}</span>
-                    <span className="font-serif text-ink font-medium">{paper.year}</span>
-                </div>
-            </div>
-
-            <div className="flex-shrink-0 flex flex-row md:flex-col gap-2 md:items-end mt-2 md:mt-0">
-                {paper.tags?.map((tag) => (
-                    <span key={tag} className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-100 whitespace-nowrap">
-                        <Trophy size={12} className="text-amber-600" /> {tag}
-                    </span>
-                ))}
-                {paper.note && (
-                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-bold bg-accent-soft text-accent border border-accent/20 whitespace-nowrap">
-                        {paper.note}
-                    </span>
-                )}
-            </div>
-        </div>
-
-        <div className="mt-3 flex flex-wrap gap-2 ml-7">
-            {paper.links.pdf && <ActionButton icon={<FileText size={16} />} label="PDF" href={paper.links.pdf} />}
-            {paper.links.code && <ActionButton icon={<Code size={16} />} label="Code" href={paper.links.code} />}
-            {paper.links.slides && <ActionButton icon={<MonitorPlay size={16} />} label="Slides" href={paper.links.slides} />}
-            {paper.links.arxiv && <ActionButton icon={<Link2 size={16} />} label="arXiv" href={paper.links.arxiv} />}
-            {paper.links.poster && <ActionButton icon={<FileImage size={16} />} label="Poster" href={paper.links.poster} />}
-        </div>
-    </article>
+const PaperGroup: React.FC<{ label: string; papers: Paper[] }> = ({ label, papers }) => (
+    <div className="mb-3 last:mb-0">
+        <p className="text-[11px] font-bold uppercase tracking-widest text-faint mb-1.5 ml-1">{label}</p>
+        <ul className="bg-surface rounded-xl border border-line divide-y divide-line overflow-hidden">
+            {papers.map((paper) => (
+                <PaperRow key={paper.id} paper={paper} />
+            ))}
+        </ul>
+    </div>
 );
 
-const ActionButton: React.FC<{ icon: React.ReactNode; label: string; href: string }> = ({ icon, label, href }) => (
+const PaperRow: React.FC<{ paper: Paper }> = ({ paper }) => (
+    <li className="px-4 py-2.5 hover:bg-accent-soft/60 transition-colors">
+        <h3 className="text-[14.5px] font-semibold text-ink leading-snug">{paper.title}</h3>
+
+        <p className="text-[12.5px] text-muted leading-snug mt-0.5">
+            {paper.authors.map((author, i) => (
+                <span key={i}>
+                    {author === PROFILE.name ? <strong className="text-ink font-bold">{author}</strong> : author}
+                    {i < paper.authors.length - 1 ? ', ' : '.'}
+                </span>
+            ))}
+        </p>
+
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-xs">
+            <span className="font-serif italic text-ink">{paper.venue}</span>
+            {paper.year && <span className="font-mono text-muted">{paper.year}</span>}
+            {paper.tags?.map((tag) => (
+                <span key={tag} className="inline-flex items-center gap-1 px-1.5 py-px rounded text-[10.5px] font-bold bg-amber-50 text-amber-700 border border-amber-100 whitespace-nowrap">
+                    <Trophy size={11} className="text-amber-600" /> {tag}
+                </span>
+            ))}
+            {paper.note && (
+                <span className="inline-flex px-1.5 py-px rounded text-[10.5px] font-bold bg-accent-soft text-accent border border-accent/20 whitespace-nowrap">
+                    {paper.note}
+                </span>
+            )}
+            <span className="flex flex-wrap gap-1.5 ml-auto">
+                {paper.links.pdf && <LinkChip label="PDF" href={paper.links.pdf} />}
+                {paper.links.code && <LinkChip label="Code" href={paper.links.code} />}
+                {paper.links.slides && <LinkChip label="Slides" href={paper.links.slides} />}
+                {paper.links.arxiv && <LinkChip label="arXiv" href={paper.links.arxiv} />}
+                {paper.links.poster && <LinkChip label="Poster" href={paper.links.poster} />}
+            </span>
+        </div>
+    </li>
+);
+
+const LinkChip: React.FC<{ label: string; href: string }> = ({ label, href }) => (
     <a
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted bg-paper rounded-lg border border-line hover:bg-accent-soft hover:text-accent hover:border-accent/30 transition-colors"
+        className="px-2 py-px text-[11px] font-medium text-muted bg-paper rounded border border-line hover:bg-accent-soft hover:text-accent hover:border-accent/30 transition-colors"
     >
-        {icon} {label}
+        {label}
     </a>
 );

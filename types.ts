@@ -24,6 +24,14 @@ export interface Paper {
     note?: string; // e.g., "Under Review"
 }
 
+export interface PubTopic {
+    key: string;
+    title: string;
+    description: string;
+    conference: string[];   // paper ids shown under "Conferences", newest first
+    journal: string[];      // paper ids shown under "Transactions & Journals", newest first
+}
+
 export interface EducationItem {
     id: string;
     school: string;
