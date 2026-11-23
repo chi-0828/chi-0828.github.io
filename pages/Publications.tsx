@@ -71,12 +71,12 @@ const PaperRow: React.FC<{ paper: Paper }> = ({ paper }) => (
             ))}
         </p>
 
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-xs">
+        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1 mt-1 text-xs">
             <span className="font-serif text-[13.5px] font-semibold text-accent">{paper.venue}</span>
-            {paper.year && <span className="font-mono text-[12.5px] font-semibold text-ink">{paper.year}</span>}
+            {paper.year && <span className="font-serif text-[13.5px] font-semibold text-ink">{paper.year}</span>}
             {paper.tags?.map((tag) => (
-                <span key={tag} className="inline-flex items-center gap-1 text-[10.5px] text-faint whitespace-nowrap">
-                    <Trophy size={10} className="text-amber-500/70" /> {tag}
+                <span key={tag} className="inline-flex items-center gap-1 text-[10.5px] text-red-400 whitespace-nowrap">
+                    <Trophy size={10} className="text-red-400" /> {tag}
                 </span>
             ))}
             {paper.note && (

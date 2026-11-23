@@ -279,7 +279,7 @@ export const PAPERS: Paper[] = [
         id: 'j6',
         title: "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories",
         authors: ["Shin-Ting Wu", "Liang-Chi Chen", "Po-Chun Huang", "Yuan-Hao Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
-        venue: "ACM Transactions on Embedded Computing Systems (TECS)",
+        venue: "ACM Transactions on Embedded Computing Systems (TECS), Integrated with CODES+ISSS 2023",
         year: "2023",
         type: PaperType.JOURNAL,
         links: {
