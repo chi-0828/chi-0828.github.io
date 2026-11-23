@@ -9,17 +9,18 @@ const resolve = (ids: string[]): Paper[] =>
 export const Publications: React.FC = () => (
     <div className="animate-rise">
         <h1 className="font-arial text-3xl font-bold tracking-tight text-ink mb-1">Publications</h1>
-        <p className="text-sm text-muted mb-5">Selected papers, grouped by research topic.</p>
-
-        <a
-            href={PROFILE.links.scholar}
-            target="_blank"
-            rel="noreferrer"
-            className="group flex items-center justify-between gap-3 mb-8 px-4 py-2.5 rounded-xl border border-line bg-surface hover:bg-accent-soft hover:border-accent/30 transition-colors"
-        >
-            <span className="text-sm font-medium text-ink group-hover:text-accent">Full publication list on Google Scholar</span>
-            <ExternalLink size={15} className="text-muted group-hover:text-accent shrink-0" />
-        </a>
+        <p className="text-sm text-muted mb-8">
+            Selected papers, grouped by research topic.
+            <a
+                href={PROFILE.links.scholar}
+                target="_blank"
+                rel="noreferrer"
+                className="ml-2 inline-flex items-center gap-1 text-accent underline underline-offset-4 decoration-accent/40 hover:decoration-accent transition-colors"
+            >
+                Full publication list on Google Scholar
+                <ExternalLink size={12} className="shrink-0" />
+            </a>
+        </p>
 
         {PUB_TOPICS.map((topic) => (
             <TopicSection key={topic.key} topic={topic} />
@@ -71,11 +72,11 @@ const PaperRow: React.FC<{ paper: Paper }> = ({ paper }) => (
         </p>
 
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mt-1 text-xs">
-            <span className="font-serif italic text-ink">{paper.venue}</span>
-            {paper.year && <span className="font-mono text-muted">{paper.year}</span>}
+            <span className="font-serif text-[13.5px] font-semibold text-accent">{paper.venue}</span>
+            {paper.year && <span className="font-mono text-[12.5px] font-semibold text-ink">{paper.year}</span>}
             {paper.tags?.map((tag) => (
-                <span key={tag} className="inline-flex items-center gap-1 px-1.5 py-px rounded text-[10.5px] font-bold bg-amber-50 text-amber-700 border border-amber-100 whitespace-nowrap">
-                    <Trophy size={11} className="text-amber-600" /> {tag}
+                <span key={tag} className="inline-flex items-center gap-1 text-[10.5px] text-faint whitespace-nowrap">
+                    <Trophy size={10} className="text-amber-500/70" /> {tag}
                 </span>
             ))}
             {paper.note && (
