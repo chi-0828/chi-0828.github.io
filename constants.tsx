@@ -79,7 +79,7 @@ export const EXPERIENCE: ExperienceItem[] = [
         role: "Software Engineering Intern, PhD",
         company: "Google, Taiwan", 
         period: "Summer 2026",
-        description: "TPU software/firmware team.",
+        description: "Worked in Platform Infrastructure Engineering / TPU / ASIC SW.",
         logo: '/img/google.jpg'
     },
     {
