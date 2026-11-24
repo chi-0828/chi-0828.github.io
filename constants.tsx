@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem, PubTopic, VisitorConfig } from './types';
+import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardGroup, PubTopic, VisitorConfig } from './types';
 
 // A highlighted person's name in prose that links to their Google Scholar profile.
 const ScholarName: React.FC<{ name: string; user: string }> = ({ name, user }) => (
@@ -151,82 +151,96 @@ export const NEWS: NewsItem[] = [
     }
 ];
 
-export const AWARDS: AwardItem[] = [
+export const AWARD_GROUPS: AwardGroup[] = [
     {
-        id: 1,
-        title: 'Google PhD Fellowship',
-        description: 'East Asia · Silicon Research (Algorithms, Architecture, Open Source Tooling)',
-        year: '2026',
-        issuer: 'Google',
-        featured: true,
-        page: '/fellowship',
-        links: [
-            { label: 'Google blog', href: FELLOWSHIP.blog },
-            { label: 'Recipient list', href: FELLOWSHIP.recipients },
+        key: 'academic',
+        title: 'Fellowships & Research Awards',
+        awards: [
+            {
+                id: 1,
+                title: 'Google PhD Fellowship',
+                description: 'East Asia · Silicon Research (Algorithms, Architecture, Open Source Tooling)',
+                year: '2026',
+                issuer: 'Google',
+                featured: true,
+                page: '/fellowship',
+                links: [
+                    { label: 'Google blog', href: FELLOWSHIP.blog },
+                    { label: 'Recipient list', href: FELLOWSHIP.recipients },
+                ],
+            },
+            {
+                id: 4,
+                title: 'NTU Doctoral Royal Palm Elite Scholarship',
+                description: '4-year full fellowship (Highly competitive; top incoming Ph.D. students)',
+                year: '2023',
+                issuer: 'National Taiwan University',
+            },
+            {
+                id: 5,
+                title: 'Best Master Thesis Award',
+                description: 'For thesis on PIM system optimization',
+                year: '2023',
+                issuer: 'IEEE Tainan Section',
+            },
+            {
+                id: 6,
+                title: 'Outstanding Student Thesis Award (Master’s Level)',
+                description: 'For thesis on PIM system optimization',
+                year: '2023',
+                issuer: 'Taiwan Information Storage Association (TISA)',
+            },
         ],
     },
     {
-        id: 2,
-        title: 'Outstanding Students Conference Travel Grant',
-        description: 'Travel Grant for DATE',
-        year: '2026',
-        issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
+        key: 'travel',
+        title: 'Conference Travel Grants',
+        awards: [
+            {
+                id: 3,
+                title: 'Google Conference Scholarship',
+                description: 'APAC Student Travel Grant for ISLPED 2025, DAC 2023',
+                year: '2025, 2023',
+                issuer: 'Google',
+                count: 2,
+            },
+            {
+                id: 2,
+                title: 'Outstanding Students Conference Travel Grant',
+                description: 'Travel Grant for DATE 2026, DAC 2023',
+                year: '2026, 2023',
+                issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
+                count: 2,
+            },
+            {
+                id: 11,
+                title: 'Graduate Student Conference Travel Grant',
+                description: 'Travel Grant for ISLPED 2025, SAC 2023',
+                year: '2025, 2023',
+                issuer: 'National Science and Technology Council (NSTC)',
+                count: 2,
+            },
+        ],
     },
     {
-        id: 10,
-        title: 'Outstanding Teaching Assistant Award',
-        description: 'Teaching Assistant, Memory and Storage Systems · Fall 2025',
-        year: '2025',
-        issuer: 'Dept. of Computer Science and Information Engineering, National Taiwan University',
-    },
-    {
-        id: 3,
-        title: 'Google Conference Scholarship',
-        description: 'APAC Student Travel Grant for ISLPED',
-        year: '2025',
-        issuer: 'Google',
-    },
-    {
-        id: 4,
-        title: 'NTU Doctoral Royal Palm Elite Scholarship',
-        description: '4-year full fellowship (Highly competitive; top incoming Ph.D. students)',
-        year: '2023',
-        issuer: 'National Taiwan University',
-    },
-    {
-        id: 5,
-        title: 'Best Master Thesis Award',
-        description: 'For thesis on PIM system optimization',
-        year: '2023',
-        issuer: 'IEEE Tainan Section',
-    },
-    {
-        id: 6,
-        title: 'Outstanding Student Thesis Award (Master’s Level)',
-        description: 'For thesis on PIM system optimization',
-        year: '2023',
-        issuer: 'Taiwan Information Storage Association (TISA)',
-    },
-    {
-        id: 7,
-        title: 'Google Conference Scholarship',
-        description: 'APAC Student Travel Grant for DAC',
-        year: '2023',
-        issuer: 'Google',
-    },
-    {
-        id: 8,
-        title: 'Outstanding Students Conference Travel Grant',
-        description: 'Travel Grant for DAC',
-        year: '2023',
-        issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
-    },
-    {
-        id: 9,
-        title: 'President’s Award',
-        description: 'Semester-top academic performance (Top 2 in department)',
-        year: '2020',
-        issuer: 'National Chung Cheng University',
+        key: 'other',
+        title: 'Teaching & Academic Honors',
+        awards: [
+            {
+                id: 10,
+                title: 'Outstanding Teaching Assistant Award',
+                description: 'Teaching Assistant, Memory and Storage Systems · Fall 2025',
+                year: '2025',
+                issuer: 'Dept. of Computer Science and Information Engineering, National Taiwan University',
+            },
+            {
+                id: 9,
+                title: 'President’s Award',
+                description: 'Semester-top academic performance (Top 2 in department)',
+                year: '2020',
+                issuer: 'National Chung Cheng University',
+            },
+        ],
     },
 ];
 

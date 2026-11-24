@@ -18,7 +18,7 @@ npm run build      # outputs to dist/
 | --- | --- |
 | Profile, bio, contact links, CV link | `constants.tsx` → `PROFILE` |
 | Education / experience timeline | `constants.tsx` → `EDUCATION`, `EXPERIENCE` |
-| News and honors | `constants.tsx` → `NEWS`, `AWARDS` |
+| News and honors | `constants.tsx` → `NEWS`, `AWARD_GROUPS` |
 | Publications | `constants.tsx` → `PAPERS` (types in `types.ts`) |
 | Logos and avatar | `public/img/` |
 | Travel globe flights | `public/trips.json` |

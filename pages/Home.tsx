@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Github, GraduationCap, Linkedin, ArrowUpRight } from 'lucide-react';
-import { EDUCATION, EXPERIENCE, NEWS, AWARDS, PROFILE } from '../constants';
+import { EDUCATION, EXPERIENCE, NEWS, AWARD_GROUPS, PROFILE } from '../constants';
 
 const contacts = [
     { href: `mailto:${PROFILE.email}`, icon: Mail, label: 'Email', ext: false },
@@ -122,51 +122,76 @@ export const Home: React.FC = () => {
                 </div>
             </section>
 
-            {/* Awards */}
+            {/* Selected Honors & Awards */}
             <section>
-                <SectionTitle>Honors &amp; Awards</SectionTitle>
+                <SectionTitle>Selected Honors &amp; Awards</SectionTitle>
 
-                <ul className="divide-y divide-line">
-                    {AWARDS.map((award) => (
-                        <li key={award.id} className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-x-4 gap-y-0.5 py-3.5">
-                            <div className="min-w-0">
-                                {/* Flagship honors stay in the same row rhythm — only weight and color change. */}
-                                <p className={award.featured ? 'text-[14.5px] font-bold text-accent leading-snug' : 'text-[14.5px] text-ink leading-snug'}>
-                                    {award.page ? (
-                                        <Link to={award.page} className="hover:underline underline-offset-4">
-                                            {award.title}
-                                            <ArrowUpRight size={14} strokeWidth={2.25} className="inline-block ml-0.5 -mt-0.5" />
-                                        </Link>
-                                    ) : award.title}
-                                </p>
-                                {award.description && (
-                                    <p className={award.featured ? 'text-[13px] text-accent/80 italic' : 'text-[13px] text-muted italic'}>
-                                        {award.description}
-                                    </p>
-                                )}
-                                {award.links && (
-                                    <p className="flex flex-wrap gap-x-3 mt-1">
-                                        {award.links.map((l) => (
-                                            <a
-                                                key={l.href}
-                                                href={l.href}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="text-[12.5px] text-accent/90 hover:text-accent hover:underline underline-offset-4"
-                                            >
-                                                {l.label} ↗
-                                            </a>
-                                        ))}
-                                    </p>
-                                )}
-                            </div>
-                            <div className="sm:text-right shrink-0">
-                                <span className={award.featured ? 'font-mono text-xs font-semibold text-accent' : 'font-mono text-xs text-faint'}>{award.year}</span>
-                                <p className={award.featured ? 'text-[13px] font-medium text-accent/90' : 'text-[13px] text-muted'}>{award.issuer}</p>
-                            </div>
-                        </li>
+                <div className="space-y-6">
+                    {AWARD_GROUPS.map((group) => (
+                        <div key={group.key}>
+                            <p className="text-[11px] font-bold uppercase tracking-widest text-faint mb-1.5 ml-1">
+                                {group.title}
+                            </p>
+                            <ul className="bg-surface rounded-xl border border-line divide-y divide-line overflow-hidden">
+                                {group.awards.map((award) => (
+                                    <li
+                                        key={award.id}
+                                        className={`flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-x-4 gap-y-1 px-4 py-3 transition-colors ${
+                                            award.featured
+                                                ? 'bg-accent-soft/50 hover:bg-accent-soft/80'
+                                                : 'hover:bg-accent-soft/60'
+                                        }`}
+                                    >
+                                        <div className="min-w-0">
+                                            {/* Flagship honors stay in the same row rhythm — only weight and color change. */}
+                                            <p className={award.featured ? 'text-[14.5px] font-bold text-accent leading-snug' : 'text-[14.5px] text-ink leading-snug'}>
+                                                {award.page ? (
+                                                    <Link to={award.page} className="hover:underline underline-offset-4">
+                                                        {award.title}
+                                                        <ArrowUpRight size={14} strokeWidth={2.25} className="inline-block ml-0.5 -mt-0.5" />
+                                                    </Link>
+                                                ) : award.title}
+                                                {award.count && award.count > 1 && (
+                                                    <span className="inline-flex items-center ml-2 px-1.5 py-px rounded text-[11px] font-mono font-medium bg-accent-soft text-accent border border-accent/20 align-middle">
+                                                        ×{award.count}
+                                                    </span>
+                                                )}
+                                            </p>
+                                            {award.description && (
+                                                <p className={award.featured ? 'text-[13px] text-accent/80 italic mt-0.5' : 'text-[13px] text-muted italic mt-0.5'}>
+                                                    {award.description}
+                                                </p>
+                                            )}
+                                            {award.links && (
+                                                <p className="flex flex-wrap gap-x-3 mt-1">
+                                                    {award.links.map((l) => (
+                                                        <a
+                                                            key={l.href}
+                                                            href={l.href}
+                                                            target="_blank"
+                                                            rel="noreferrer"
+                                                            className="text-[12.5px] text-accent/90 hover:text-accent hover:underline underline-offset-4"
+                                                        >
+                                                            {l.label} ↗
+                                                        </a>
+                                                    ))}
+                                                </p>
+                                            )}
+                                        </div>
+                                        <div className="sm:text-right sm:shrink-0 sm:max-w-[48%]">
+                                            <span className={award.featured ? 'font-mono text-xs font-semibold text-accent' : 'font-mono text-xs text-faint'}>
+                                                {award.year}
+                                            </span>
+                                            <p className={award.featured ? 'text-[13px] font-medium text-accent/90' : 'text-[13px] text-muted'}>
+                                                {award.issuer}
+                                            </p>
+                                        </div>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </section>
         </div>
     );

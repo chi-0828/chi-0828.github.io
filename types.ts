@@ -64,9 +64,16 @@ export interface AwardItem {
     description: string;
     year: string;
     issuer: string;
+    count?: number; // number of times received when consolidated (e.g. recurring travel grants)
     featured?: boolean; // flagship honors are emphasised in the list
     page?: string; // internal route; the title links here when set
     links?: { label: string; href: string }[]; // external references shown under the description
+}
+
+export interface AwardGroup {
+    key: string;
+    title: string;
+    awards: AwardItem[];
 }
 
 export interface VisitorConfig {
