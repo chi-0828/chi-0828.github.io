@@ -247,8 +247,8 @@ export const PAPERS: Paper[] = [
         id: 'j2',
         title: "HFLSM: A Hybrid Flattened LSM-tree for Write-Efficient Key-Value Stores",
         authors: ["Kun-Chi Chiang", "Chih-Yi Lyu", "Liang-Chi Chen", "Yu-Ming Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
-        venue: "IEEE Embedded Systems Letters (ESL), Integrated with CODES+ISSS 2026",
-        year: "",
+        venue: "IEEE Embedded Systems Letters (ESL), Integrated with CODES+ISSS",
+        year: "2026",
         type: PaperType.JOURNAL,
         links: {
             pdf: "https://ieeexplore.ieee.org/abstract/document/11741118"
@@ -258,8 +258,8 @@ export const PAPERS: Paper[] = [
         id: 'j3',
         title: "GraphISC: Enabling Out-of-Core Graph Processing with Distributed Computational Storage",
         authors: ["Ssu-Hao Tsai", "Wen Sheng Lim", "Liang-Chi Chen", "Tei-Wei Kuo", "Yuan-Hao Chang"],
-        venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Integrated with CASES 2026",
-        year: "",
+        venue: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD), Integrated with CASES",
+        year: "2026",
         type: PaperType.JOURNAL,
         note: "To appear",
         links: {}
@@ -290,8 +290,8 @@ export const PAPERS: Paper[] = [
         id: 'j6',
         title: "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories",
         authors: ["Shin-Ting Wu", "Liang-Chi Chen", "Po-Chun Huang", "Yuan-Hao Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
-        venue: "ACM Transactions on Embedded Computing Systems (TECS), Integrated with CODES+ISSS 2023",
-        year: "",
+        venue: "ACM Transactions on Embedded Computing Systems (TECS), Integrated with CODES+ISSS",
+        year: "2023",
         type: PaperType.JOURNAL,
         links: {
             pdf: "https://doi.org/10.1145/3608033"
