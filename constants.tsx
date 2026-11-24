@@ -199,7 +199,7 @@ export const AWARD_GROUPS: AwardGroup[] = [
             {
                 id: 3,
                 title: 'Google Conference Scholarship',
-                description: 'APAC Student Travel Grant for ISLPED 2025, DAC 2023',
+                description: 'APAC Student Travel Grant (ISLPED 2025, DAC 2023)',
                 year: '2025, 2023',
                 issuer: 'Google',
                 count: 2,
@@ -207,7 +207,7 @@ export const AWARD_GROUPS: AwardGroup[] = [
             {
                 id: 2,
                 title: 'Outstanding Students Conference Travel Grant',
-                description: 'Travel Grant for DATE 2026, DAC 2023',
+                description: 'DATE 2026, DAC 2023',
                 year: '2026, 2023',
                 issuer: 'Foundation for the Advancement of Outstanding Scholarship (FAOS)',
                 count: 2,
@@ -215,7 +215,7 @@ export const AWARD_GROUPS: AwardGroup[] = [
             {
                 id: 11,
                 title: 'Graduate Student Conference Travel Grant',
-                description: 'Travel Grant for ISLPED 2025, SAC 2023',
+                description: 'ISLPED 2025, SAC 2023',
                 year: '2025, 2023',
                 issuer: 'National Science and Technology Council (NSTC)',
                 count: 2,
@@ -229,9 +229,9 @@ export const AWARD_GROUPS: AwardGroup[] = [
             {
                 id: 10,
                 title: 'Outstanding Teaching Assistant Award',
-                description: 'Teaching Assistant, Memory and Storage Systems · Fall 2025',
+                description: 'Memory and Storage Systems · Fall 2025',
                 year: '2025',
-                issuer: 'Dept. of Computer Science and Information Engineering, National Taiwan University',
+                issuer: 'Dept. of CSIE, National Taiwan University',
             },
             {
                 id: 9,

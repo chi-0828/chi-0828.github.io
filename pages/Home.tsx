@@ -126,7 +126,7 @@ export const Home: React.FC = () => {
             <section>
                 <SectionTitle>Selected Honors &amp; Awards</SectionTitle>
 
-                <div className="space-y-6">
+                <div className="space-y-3.5">
                     {AWARD_GROUPS.map((group) => (
                         <div key={group.key}>
                             <p className="text-[11px] font-bold uppercase tracking-widest text-faint mb-1.5 ml-1">
@@ -136,55 +136,49 @@ export const Home: React.FC = () => {
                                 {group.awards.map((award) => (
                                     <li
                                         key={award.id}
-                                        className={`flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-x-4 gap-y-1 px-4 py-3 transition-colors ${
+                                        className={`px-4 py-2 transition-colors ${
                                             award.featured
                                                 ? 'bg-accent-soft/50 hover:bg-accent-soft/80'
                                                 : 'hover:bg-accent-soft/60'
                                         }`}
                                     >
-                                        <div className="min-w-0">
-                                            {/* Flagship honors stay in the same row rhythm — only weight and color change. */}
-                                            <p className={award.featured ? 'text-[14.5px] font-bold text-accent leading-snug' : 'text-[14.5px] text-ink leading-snug'}>
+                                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                                            <h3 className={award.featured ? 'text-[14.5px] font-bold text-accent leading-snug' : 'text-[14.5px] font-semibold text-ink leading-snug'}>
                                                 {award.page ? (
                                                     <Link to={award.page} className="hover:underline underline-offset-4">
                                                         {award.title}
                                                         <ArrowUpRight size={14} strokeWidth={2.25} className="inline-block ml-0.5 -mt-0.5" />
                                                     </Link>
                                                 ) : award.title}
-                                                {award.count && award.count > 1 && (
-                                                    <span className="inline-flex items-center ml-2 px-1.5 py-px rounded text-[11px] font-mono font-medium bg-accent-soft text-accent border border-accent/20 align-middle">
-                                                        ×{award.count}
-                                                    </span>
-                                                )}
-                                            </p>
-                                            {award.description && (
-                                                <p className={award.featured ? 'text-[13px] text-accent/80 italic mt-0.5' : 'text-[13px] text-muted italic mt-0.5'}>
-                                                    {award.description}
-                                                </p>
+                                            </h3>
+                                            {award.count && award.count > 1 && (
+                                                <span className="inline-flex px-1.5 py-px rounded text-[10.5px] font-mono font-bold bg-accent-soft text-accent border border-accent/20 whitespace-nowrap">
+                                                    ×{award.count}
+                                                </span>
                                             )}
                                             {award.links && (
-                                                <p className="flex flex-wrap gap-x-3 mt-1">
+                                                <span className="flex flex-wrap gap-1.5 ml-auto">
                                                     {award.links.map((l) => (
                                                         <a
                                                             key={l.href}
                                                             href={l.href}
                                                             target="_blank"
                                                             rel="noreferrer"
-                                                            className="text-[12.5px] text-accent/90 hover:text-accent hover:underline underline-offset-4"
+                                                            className="px-2 py-px text-[11px] font-medium text-muted bg-paper rounded border border-line hover:bg-accent-soft hover:text-accent hover:border-accent/30 transition-colors"
                                                         >
-                                                            {l.label} ↗
+                                                            {l.label}
                                                         </a>
                                                     ))}
-                                                </p>
+                                                </span>
                                             )}
                                         </div>
-                                        <div className="sm:text-right sm:shrink-0 sm:max-w-[48%]">
-                                            <span className={award.featured ? 'font-mono text-xs font-semibold text-accent' : 'font-mono text-xs text-faint'}>
-                                                {award.year}
-                                            </span>
-                                            <p className={award.featured ? 'text-[13px] font-medium text-accent/90' : 'text-[13px] text-muted'}>
-                                                {award.issuer}
-                                            </p>
+
+                                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mt-0.5 text-xs">
+                                            <span className="font-serif text-[13.5px] font-semibold text-accent">{award.issuer}</span>
+                                            <span className="font-serif text-[13.5px] font-semibold text-ink">{award.year}</span>
+                                            {award.description && (
+                                                <span className="text-[12.5px] text-muted leading-snug">· {award.description}</span>
+                                            )}
                                         </div>
                                     </li>
                                 ))}
