@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem, PubTopic } from './types';
+import { Paper, PaperType, EducationItem, ExperienceItem, NewsItem, AwardItem, PubTopic, VisitorConfig } from './types';
 
 // A highlighted person's name in prose that links to their Google Scholar profile.
 const ScholarName: React.FC<{ name: string; user: string }> = ({ name, user }) => (
@@ -32,7 +32,7 @@ export const PROFILE = {
     cvLink: "https://drive.google.com/file/d/1HLpfbAtE2ratXp0CD2LWCkjgkydYV4ii/view?usp=sharing",
     links: {
         github: "https://github.com/chi-0828",
-        scholar: "https://scholar.google.com.tw/citations?user=SoyMWUsAAAA",
+        scholar: "https://scholar.google.com.tw/citations?user=SoyMWUsAAAAJ",
         linkedin: "https://www.linkedin.com/in/liang-chi-chen-882a531b9",
     },
 };
@@ -46,6 +46,17 @@ export const FELLOWSHIP = {
     blog: "https://blog.google/company-news/outreach-and-initiatives/google-org/phd-fellows-2026/",
     recipients: "https://research.google/programs-and-events/phd-fellowship/recipients/",
     cohort: { fellows: 148, countries: 38, funding: "$13M" },
+};
+
+// MapMyVisitors configuration (https://mapmyvisitors.com).
+// Register https://chi-0828.github.io, then paste the generated <script> src URL below.
+// Supports both 2D map ("map.js", id="mapmyvisitors") and 3D globe ("clstr_globe.js", id="clstr_globe").
+export const VISITORS: VisitorConfig = {
+    scriptSrc: "https://mapmyvisitors.com/map.js?d=Cv8tLWk-fc-7F72WfHCtjl3C02fHJP3qqDnKrWmCmt0&cl=ffffff&w=a",
+    // Optional: override auto-detected script id ("mapmyvisitors" | "clstr_globe")
+    // scriptId: "mapmyvisitors",
+    // Optional: public MapMyVisitors stats page URL (e.g. "https://mapmyvisitors.com/web/...")
+    statsUrl: "https://mapmyvisitors.com/web/1c9n4",
 };
 
 export const EDUCATION: EducationItem[] = [
@@ -280,7 +291,7 @@ export const PAPERS: Paper[] = [
         title: "WARM-tree: Making Quadtrees Write-efficient and Space-economic on Persistent Memories",
         authors: ["Shin-Ting Wu", "Liang-Chi Chen", "Po-Chun Huang", "Yuan-Hao Chang", "Chien-Chung Ho", "Wei-Kuan Shih"],
         venue: "ACM Transactions on Embedded Computing Systems (TECS), Integrated with CODES+ISSS 2023",
-        year: "2023",
+        year: "",
         type: PaperType.JOURNAL,
         links: {
             pdf: "https://doi.org/10.1145/3608033"

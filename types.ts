@@ -68,3 +68,9 @@ export interface AwardItem {
     page?: string; // internal route; the title links here when set
     links?: { label: string; href: string }[]; // external references shown under the description
 }
+
+export interface VisitorConfig {
+    scriptSrc: string;
+    scriptId?: 'mapmyvisitors' | 'clstr_globe';
+    statsUrl?: string;
+}

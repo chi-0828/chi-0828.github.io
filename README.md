@@ -22,6 +22,7 @@ npm run build      # outputs to dist/
 | Publications | `constants.tsx` → `PAPERS` (types in `types.ts`) |
 | Logos and avatar | `public/img/` |
 | Travel globe flights | `public/trips.json` |
+| Visitor map (MapMyVisitors) | `constants.tsx` → `VISITORS` |
 
 ### Updating the travel globe
 
@@ -32,7 +33,7 @@ Export the JSON, replace `public/trips.json`, and commit. The public page only s
 
 ```
 App.tsx            routes + page shell
-pages/             Home, Publications, Travel (lazy-loaded, pulls in three.js)
+pages/             Home, Publications, Fellowship, Visitors, Travel (lazy-loaded, pulls in three.js)
 components/        TopBar, travel helpers, city autocomplete + offline city list
 constants.tsx      all site content
 types.ts           content types
