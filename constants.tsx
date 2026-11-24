@@ -46,6 +46,31 @@ export const FELLOWSHIP = {
     blog: "https://blog.google/company-news/outreach-and-initiatives/google-org/phd-fellows-2026/",
     recipients: "https://research.google/programs-and-events/phd-fellowship/recipients/",
     cohort: { fellows: 148, countries: 38, funding: "$13M" },
+    research: {
+        title: "Breaking the Memory Wall via Emerging Non-von Neumann Architectures for Large-Scale AI",
+        overview: [
+            "As large-scale AI, data-intensive analytics, and cloud services grow, moving massive datasets across the memory and storage hierarchy dominates both execution latency and energy consumption. Traditional von Neumann systems separate computation from storage, hitting a critical data-movement wall that compute scaling alone cannot solve—motivating a fundamental shift from compute-centric to memory-centric architectures that perform computation closer to where data resides.",
+            "Building on real-system experience across Processing-in-Memory and computational storage for data-intensive workloads, my doctoral research investigates how emerging non-von Neumann architectures—spanning near-memory, in-storage, and deeper memory/storage-centric computing—can scale efficiently across the computing hierarchy.",
+        ],
+        challenges: [
+            {
+                label: "01",
+                title: "Device-Level Constraints",
+                detail: "PIM systems face limited logic resources, restricted capacity, and non-uniform placement, while NAND flash and storage controllers introduce latency asymmetry, error behavior, endurance limits, and tight power/area budgets.",
+            },
+            {
+                label: "02",
+                title: "Full-Stack System Integration",
+                detail: "Emerging AI workloads span storage devices, host memory, CPUs, and GPUs; computation must be partitioned across layers so near-data processing reduces data movement without excessive coordination overhead.",
+            },
+            {
+                label: "03",
+                title: "Hardware-Software Co-Design",
+                detail: "Architectural features alone are insufficient unless software frameworks, runtime systems, and data layouts adapt to device constraints—turning narrow point solutions into practical, programmable design principles.",
+            },
+        ],
+        impact: "By designing memory-centric architectures around realistic device and system constraints, this research bridges hardware innovation and full-stack software—improving both performance and energy sustainability across large-scale AI and data-intensive computing infrastructure.",
+    },
 };
 
 // MapMyVisitors configuration (https://mapmyvisitors.com).

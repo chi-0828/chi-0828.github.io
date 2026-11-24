@@ -35,7 +35,17 @@ const cardClass =
     'transition-all duration-200 cursor-default ' +
     'hover:bg-[#dce7f8] hover:border-accent hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-1';
 
+const formatRecipientCount = (count: number): string => {
+    const words: Record<number, string> = { 2: 'Two', 3: 'Three', 4: 'Four' };
+    return `${words[count] ?? count}-time recipient`;
+};
+
 export const Home: React.FC = () => {
+    const featuredAwards = AWARD_GROUPS.flatMap((g) => g.awards).filter((a) => a.featured);
+    const regularGroups = AWARD_GROUPS
+        .map((g) => ({ ...g, awards: g.awards.filter((a) => !a.featured) }))
+        .filter((g) => g.awards.length > 0);
+
     return (
         <div className="animate-rise">
             {/* Intro — fills the width */}
@@ -126,59 +136,86 @@ export const Home: React.FC = () => {
             <section>
                 <SectionTitle>Selected Honors &amp; Awards</SectionTitle>
 
-                <div className="space-y-3.5">
-                    {AWARD_GROUPS.map((group) => (
+                {featuredAwards.map((award) => (
+                    <div
+                        key={award.id}
+                        className="mb-7 rounded-xl border border-line border-l-[3px] border-l-accent bg-surface px-4 py-3.5 shadow-soft transition-colors hover:bg-accent-soft/35"
+                    >
+                        <div className="grid grid-cols-[1fr] sm:grid-cols-[77px_1fr] gap-x-5 gap-y-1 items-baseline">
+                            <span className="font-mono text-xs font-semibold text-accent sm:text-right">
+                                {award.year}
+                            </span>
+                            <div className="min-w-0">
+                                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                                    <h3 className="text-[15px] font-bold text-ink leading-snug">
+                                        {award.page ? (
+                                            <Link to={award.page} className="hover:text-accent hover:underline underline-offset-4 transition-colors">
+                                                {award.title}
+                                                <ArrowUpRight size={14} strokeWidth={2.25} className="inline-block ml-0.5 -mt-0.5 text-accent" />
+                                            </Link>
+                                        ) : award.title}
+                                    </h3>
+                                    {(award.page || award.links) && (
+                                        <span className="sm:ml-auto flex flex-wrap gap-1.5">
+                                            {award.page && (
+                                                <Link
+                                                    to={award.page}
+                                                    className="px-2 py-px text-[11px] font-medium text-accent bg-accent-soft rounded border border-accent/25 hover:bg-[#dce7f8] hover:border-accent/45 transition-colors"
+                                                >
+                                                    Research direction
+                                                </Link>
+                                            )}
+                                            {award.links?.map((l) => (
+                                                <a
+                                                    key={l.href}
+                                                    href={l.href}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    className="px-2 py-px text-[11px] font-medium text-accent bg-accent-soft rounded border border-accent/25 hover:bg-[#dce7f8] hover:border-accent/45 transition-colors"
+                                                >
+                                                    {l.label}
+                                                </a>
+                                            ))}
+                                        </span>
+                                    )}
+                                </div>
+                                <p className="text-[13px] text-muted mt-1 leading-snug">
+                                    <span className="font-medium text-ink/80">{award.issuer}</span>
+                                    {award.description && <> · {award.description}</>}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+
+                <div className="space-y-6">
+                    {regularGroups.map((group) => (
                         <div key={group.key}>
-                            <p className="text-[11px] font-bold uppercase tracking-widest text-faint mb-1.5 ml-1">
+                            <h3 className="font-arial text-[12px] font-bold uppercase tracking-widest text-ink/70 pb-1.5 mb-1 border-b border-line">
                                 {group.title}
-                            </p>
-                            <ul className="bg-surface rounded-xl border border-line divide-y divide-line overflow-hidden">
+                            </h3>
+                            <ul className="divide-y divide-line">
                                 {group.awards.map((award) => (
                                     <li
                                         key={award.id}
-                                        className={`px-4 py-2 transition-colors ${
-                                            award.featured
-                                                ? 'bg-accent-soft/50 hover:bg-accent-soft/80'
-                                                : 'hover:bg-accent-soft/60'
-                                        }`}
+                                        className="grid grid-cols-[72px_1fr] sm:grid-cols-[96px_1fr] gap-x-4 sm:gap-x-5 items-baseline py-2.5 px-2 -mx-2 rounded-lg hover:bg-accent-soft/45 transition-colors"
                                     >
-                                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                                            <h3 className={award.featured ? 'text-[14.5px] font-bold text-accent leading-snug' : 'text-[14.5px] font-semibold text-ink leading-snug'}>
-                                                {award.page ? (
-                                                    <Link to={award.page} className="hover:underline underline-offset-4">
-                                                        {award.title}
-                                                        <ArrowUpRight size={14} strokeWidth={2.25} className="inline-block ml-0.5 -mt-0.5" />
-                                                    </Link>
-                                                ) : award.title}
-                                            </h3>
-                                            {award.count && award.count > 1 && (
-                                                <span className="inline-flex px-1.5 py-px rounded text-[10.5px] font-mono font-bold bg-accent-soft text-accent border border-accent/20 whitespace-nowrap">
-                                                    ×{award.count}
-                                                </span>
-                                            )}
-                                            {award.links && (
-                                                <span className="flex flex-wrap gap-1.5 ml-auto">
-                                                    {award.links.map((l) => (
-                                                        <a
-                                                            key={l.href}
-                                                            href={l.href}
-                                                            target="_blank"
-                                                            rel="noreferrer"
-                                                            className="px-2 py-px text-[11px] font-medium text-muted bg-paper rounded border border-line hover:bg-accent-soft hover:text-accent hover:border-accent/30 transition-colors"
-                                                        >
-                                                            {l.label}
-                                                        </a>
-                                                    ))}
-                                                </span>
-                                            )}
-                                        </div>
-
-                                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mt-0.5 text-xs">
-                                            <span className="font-serif text-[13.5px] font-semibold text-accent">{award.issuer}</span>
-                                            <span className="font-serif text-[13.5px] font-semibold text-ink">{award.year}</span>
-                                            {award.description && (
-                                                <span className="text-[12.5px] text-muted leading-snug">· {award.description}</span>
-                                            )}
+                                        <span className="font-mono text-[11.5px] sm:text-xs text-muted/85 text-right leading-tight">
+                                            {award.year}
+                                        </span>
+                                        <div className="min-w-0">
+                                            <p className="text-[14.5px] font-medium text-ink leading-snug">
+                                                {award.title}
+                                                {award.count && award.count > 1 && (
+                                                    <span className="text-[12.5px] font-normal text-muted ml-1.5">
+                                                        ({formatRecipientCount(award.count)})
+                                                    </span>
+                                                )}
+                                            </p>
+                                            <p className="text-[13px] text-muted leading-snug mt-0.5">
+                                                {award.issuer}
+                                                {award.description && <> · {award.description}</>}
+                                            </p>
                                         </div>
                                     </li>
                                 ))}
